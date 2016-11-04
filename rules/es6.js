@@ -72,6 +72,8 @@ module.exports = {
     // http://eslint.org/docs/rules/prefer-template
     "prefer-template": 2,
     // disallow generator functions that do not have yield
-    "require-yield": 2
+    "require-yield": 2,
+    // flag usage of arguments variables
+    "prefer-rest-params": 2
   }
 };

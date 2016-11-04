@@ -124,7 +124,7 @@ module.exports = {
     "padded-blocks": 0,
     // require quotes around object literal property names
     // http://eslint.org/docs/rules/quote-props.html
-    "quote-props": [2, "as-needed", {
+    "quote-props": [2, "consistent-as-needed", {
       "keywords": false,
       "unnecessary": true
     }],

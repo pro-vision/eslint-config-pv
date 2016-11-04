@@ -139,8 +139,6 @@ module.exports = {
     "no-warning-comments": 0,
     // disallow use of the with statement
     "no-with": 2,
-    // flag usage of arguments variables
-    "prefer-rest-params": 2,
     // require use of the second argument for parseInt()
     "radix": 2,
     // requires to declare all vars on top of their containing scope
