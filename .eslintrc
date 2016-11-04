@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "./es6.js"
+  ],
+  "rules": {
+    "no-magic-numbers": 0,
+    "quote-props": 0
+  }
+}
