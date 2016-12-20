@@ -1,3 +1,7 @@
+# 1.0.2
+
+-   Fixed: testing transferring ownership
+
 # 1.0.1
 
 -   Changed: publishing through npmpub
