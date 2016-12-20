@@ -1,3 +1,7 @@
+# 1.0.3
+
+-   Added: tests
+
 # 1.0.2
 
 -   Fixed: testing transferring ownership

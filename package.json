@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-pv",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "pro!vision ESLint configuration. Can be adapted and adjusted in each project.",
   "author": {
     "name": "pro!vision GmbH",
@@ -35,7 +35,7 @@
     "lint:md": "remark . --frail --use lint --quiet",
     "pretest": "npm run lint",
     "release": "npmpub",
-    "test": "echo test",
+    "test": "jest",
     "watch": "jest --watch"
   },
   "main": "es6.js",
@@ -49,6 +49,7 @@
     "eslint": "3.12.2",
     "eslint-plugin-import": "2.2.0",
     "github-release-from-changelog": "1.2.1",
+    "jest": "18.0.0",
     "npm-run-all": "3.1.2",
     "npmpub": "3.1.0",
     "remark-cli": "2.1.0",
