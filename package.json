@@ -20,7 +20,7 @@
       "email": "mhauch@pro-vision.de"
     }
   ],
-  "preferGlobal": true,
+  "preferGlobal": false,
   "homepage": "https://github.com/pro-vision/eslint-config-pv",
   "bugs": {
     "url": "https://github.com/pro-vision/eslint-config-pv/issues"
