@@ -3,6 +3,7 @@
 -   Changed: no-magic-numbers to 0
 -   Changed: object-property-newline: [2, { "allowMultiplePropertiesPerLine": true }]
 -   Changed: quote-props: [2, "as-needed", { "keywords": true, "unnecessary": true }]
+-   Changed: merged all rules into fewer files
 
 # 1.0.3
 
