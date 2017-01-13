@@ -107,7 +107,7 @@ module.exports = {
     // require padding inside curly braces
     "object-curly-spacing": 0,
     // require that object properties be placed on separate lines for better readability
-    "object-property-newline": 2,
+    "object-property-newline": [2, { "allowMultiplePropertiesPerLine": true }],
     // allow just one var statement per function
     "one-var": [2, {
       "uninitialized": "always",
@@ -124,8 +124,8 @@ module.exports = {
     "padded-blocks": 0,
     // require quotes around object literal property names
     // http://eslint.org/docs/rules/quote-props.html
-    "quote-props": [2, "consistent-as-needed", {
-      "keywords": false,
+    "quote-props": [2, "as-needed", {
+      "keywords": true,
       "unnecessary": true
     }],
     // specify whether double or single quotes should be used

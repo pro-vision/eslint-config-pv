@@ -73,7 +73,7 @@ module.exports = {
     "no-loop-func": 2,
     // Disallow Magic Numbers
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-magic-numbers.md
-    "no-magic-numbers": [2, { "ignore": [-1, 0, 1, 2, 10, 180] }],
+    "no-magic-numbers": 0,
     // disallow use of multiple spaces
     "no-multi-spaces": 1,
     // disallow use of multiline strings
