@@ -74,6 +74,8 @@ module.exports = {
     // disallow generator functions that do not have yield
     "require-yield": 2,
     // flag usage of arguments variables
-    "prefer-rest-params": 2
+    "prefer-rest-params": 2,
+    // babel inserts `"use strict";` for us
+    "strict": [2, "never"]
   }
 };

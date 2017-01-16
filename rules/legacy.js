@@ -339,9 +339,8 @@ module.exports = {
     "space-infix-ops": 1,
     // Require or disallow spaces before/after unary operators
     "space-unary-ops": 1,
-    "spaced-comment": [1, "always", { "exceptions": ["-", "+", "/", "*"]}],    // require or disallow a space immediately following the // or /* in a comment
-    // babel inserts `"use strict";` for us
-    "strict": [2, "never"],
+    // require or disallow a space immediately following the // or /* in a comment
+    "spaced-comment": [1, "always", { "exceptions": ["-", "+", "/", "*"]}],
     // maintain consistency around the spacing inside of template literals
     "template-curly-spacing": [1, "never"],
     // disallow comparisons with the value NaN
