@@ -1,3 +1,7 @@
+# 1.0.5
+
+-   Changed: Moved strict to es6.js
+
 # 1.0.4
 
 -   Changed: no-magic-numbers to 0
