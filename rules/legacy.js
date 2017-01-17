@@ -202,7 +202,7 @@ module.exports = {
     // disallow nested ternary expressions
     "no-nested-ternary": 1,
     // disallow use of new operator when not part of the assignment or comparison
-    "no-new": 2,
+    "no-new": 0,
     // disallow use of new operator for Function object
     "no-new-func": 2,
     // disallow use of the Object constructor

@@ -1,3 +1,7 @@
+# 1.0.6
+
+-   Changed: disabled no-new
+
 # 1.0.5
 
 -   Changed: Moved strict to es6.js
