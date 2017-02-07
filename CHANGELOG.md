@@ -1,3 +1,7 @@
+# 1.0.7
+
+- Updated: license
+
 # 1.0.6
 
 -   Changed: disabled no-new
