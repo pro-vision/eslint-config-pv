@@ -30,7 +30,7 @@ module.exports = {
     // enforces consistent naming when capturing the current execution context
     "consistent-this": [1, "that"],
     // specify curly brace conventions for all control statements
-    "curly": [1, "all"],
+    "curly": ["error", "multi-line", "consistent"],
     // require default case in switch statements
     "default-case": 0,
     // enforces consistent newlines before or after dots

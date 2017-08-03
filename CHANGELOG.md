@@ -1,3 +1,7 @@
+# 1.0.8
+
+- Changed: curly to ["error", "multi-line", "consistent"]
+
 # 1.0.7
 
 - Updated: license
