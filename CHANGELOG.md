@@ -1,6 +1,10 @@
-# 1.0.8
+# 1.0.9
 
 - Changed: curly to ["error", "multi-line", "consistent"]
+
+# 1.0.8
+
+[Skipped because of publishing issues]
 
 # 1.0.7
 
