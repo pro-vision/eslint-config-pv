@@ -1,18 +1,23 @@
+# 2.0.0
+
+-   Changed: Compatible with eslint 4.1.6
+
+
 # 1.0.10
 
-- Changed: curly to ["error", "multi-line", "consistent"]
+-   Changed: curly to: "error", "multi-line", "consistent"
 
 # 1.0.9
 
-[Skipped because of publishing issues]
+(Skipped because of publishing issues))
 
 # 1.0.8
 
-[Skipped because of publishing issues]
+(Skipped because of publishing issues)
 
 # 1.0.7
 
-- Updated: license
+-   Updated: license
 
 # 1.0.6
 
@@ -25,8 +30,8 @@
 # 1.0.4
 
 -   Changed: no-magic-numbers to 0
--   Changed: object-property-newline: [2, { "allowMultiplePropertiesPerLine": true }]
--   Changed: quote-props: [2, "as-needed", { "keywords": true, "unnecessary": true }]
+-   Changed: object-property-newline: (2, { "allowMultiplePropertiesPerLine": true })
+-   Changed: quote-props: (2, "as-needed", { "keywords": true, "unnecessary": true })
 -   Changed: merged all rules into fewer files
 
 # 1.0.3
