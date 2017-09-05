@@ -1,7 +1,7 @@
 # 2.0.0
 
 -   Changed: Compatible with eslint 4.6.1
--   Changed: added `"array-bracket-newline": ["error", { "multiline": false, "minItems": 2 }]`
+-   Changed: added `"array-bracket-newline": ["off"]`
 -   Changed: added `"array-element-newline": ["off"]`
 -   Changed: added `"capitalized-comments": ["off"]`
 -   Changed: added `"class-methods-use-this": ["off"]`
