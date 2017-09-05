@@ -2,31 +2,6 @@ module.exports = {
   "env": {
     "es6": true
   },
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "binaryLiterals": false,
-    "blockBindings": true,
-    "classes": true,
-    "defaultParams": true,
-    "destructuring": true,
-    "forOf": true,
-    "generators": true,
-    "modules": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralDuplicateProperties": false,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "octalLiterals": false,
-    "regexUFlag": false,
-    "regexYFlag": false,
-    "restParams": true,
-    "spread": true,
-    "superInFunctions": false,
-    "templateStrings": true,
-    "unicodeCodePointEscapes": false,
-    "globalReturn": false,
-    "jsx": false
-  },
   "rules": {
     // 4.0.0
 

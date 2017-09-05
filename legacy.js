@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    "./rules/4-0-0",
+    "./rules/4-0",
     "./rules/4-2",
     "./rules/4-6",
   ].map(require.resolve),
@@ -13,7 +13,6 @@ module.exports = {
   },
   rules: {
     "comma-dangle": ["error", "never"],
-    "prefer-numeric-literals": "off",
     "vars-on-top": "error",
     "no-restricted-properties": ["error", {
       object: "arguments",
@@ -25,6 +24,6 @@ module.exports = {
     }, {
       property: "__defineSetter__",
       message: "Please use Object.defineProperty instead.",
-    }],
+    }]
   }
 };
