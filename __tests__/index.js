@@ -96,7 +96,7 @@ describe("flags no warnings with valid js", () => {
 
   beforeEach(() => {
     cli = new CLIEngine({
-      extends: ["../es6.js"],
+      extends: ["../index.js"],
       env: {
         "es6": true,
         "browser": true
@@ -123,7 +123,7 @@ describe("flags warnings with invalid js", () => {
 
   beforeEach(() => {
     cli = new CLIEngine({
-      extends: ["../es6.js"],
+      extends: ["../index.js"],
       env: {
         "es6": true,
         "browser": true
@@ -157,30 +157,5 @@ describe("flags warnings with invalid js", () => {
   it("correct severity for error", () => {
     result = cli.executeOnText(invalidJS).results[0];
     expect(result.messages[0].severity).toBe(2);
-  });
-
-  it("did warn", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.warningCount).toBe(1);
-  });
-
-  it("correct warning text", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[1].message).toBe("'something' is not defined.");
-  });
-
-  it("correct warning rule", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[1].ruleId).toBe("no-undef");
-  });
-
-  it("correct line number for warning", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[1].line).toBe(3);
-  });
-
-  it("correct severity for warning", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[1].severity).toBe(1);
   });
 });

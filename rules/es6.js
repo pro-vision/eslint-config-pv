@@ -28,54 +28,105 @@ module.exports = {
     "jsx": false
   },
   "rules": {
+    // 4.0.0
+
     // enforces no braces where they can be omitted
-    // http://eslint.org/docs/rules/arrow-body-style
-    "arrow-body-style": [2, "as-needed"],
+    "arrow-body-style": ["error", "as-needed"],
+
     // require parens in arrow function arguments
-    "arrow-parens": [1, "always"],
+    "arrow-parens": ["error", "as-needed"],
+
     // require space before/after arrow function"s arrow
-    // https://github.com/eslint/eslint/blob/master/docs/rules/arrow-spacing.md
-    "arrow-spacing": [2, {
-      "before": true,
-      "after": true
-    }],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+
+    // if a class method does not use this, it can safely be made a static function
+    "class-methods-use-this": ["off"],
+
     // verify super() callings in constructors
-    "constructor-super": 2,
+    "constructor-super": ["error"],
+
     // enforce the spacing around the * in generator functions
-    "generator-star-spacing": 0,
-    // disallow modifying variables of class declarations
-    "no-class-assign": 2,
+    "generator-star-spacing": ["off"],
+
+    // Disallow await inside of loops
+    "no-await-in-loop": ["error"],
+
+    // Disallow modifying variables of class declarations
+    "no-class-assign": ["error"],
+
     // disallow modifying variables that are declared using const
-    "no-const-assign": 2,
+    "no-const-assign": ["error"],
+
     // Disallow duplicate name in class members
-    // https://github.com/eslint/eslint/blob/master/docs/rules/no-dupe-class-members.md
-    "no-dupe-class-members": 2,
+    "no-dupe-class-members": ["error"],
+
     // Disallow empty destructuring patterns
-    // https://github.com/eslint/eslint/blob/master/docs/rules/no-empty-pattern.md
-    "no-empty-pattern": 2,
+    "no-empty-pattern": ["error"],
+
+    // Disallow template literal placeholder syntax in regular strings
+    "no-template-curly-in-string": ["error"],
+
     // disallow to use this/super before super() calling in constructors.
-    "no-this-before-super": 2,
+    "no-this-before-super": ["error"],
+
     // require let or const instead of var
-    "no-var": 2,
+    "no-var": ["error"],
+
+    // Disallow renaming import, export, and destructured assignments to the same name
+    "no-useless-rename": ["error"],
+
     // require method and property shorthand syntax for object literals
-    // https://github.com/eslint/eslint/blob/master/docs/rules/object-shorthand.md
-    "object-shorthand": [1, "always"],
+    "object-shorthand": ["error", "always"],
+
     // suggest using arrow functions as callbacks
-    "prefer-arrow-callback": 2,
+    "prefer-arrow-callback": ["error"],
+
     // suggest using of const declaration for variables that are never modified after declared
-    "prefer-const": 2,
-    // suggest using the spread operator instead of .apply()
-    "prefer-spread": 1,
+    "prefer-const": ["error"],
+
+    // Prefer destructuring from arrays and objects
+    "prefer-destructuring": ["off"],
+
+    // require using Error objects as Promise rejection reasons
+    "prefer-promise-reject-errors": ["off"],
+
     // suggest using Reflect methods where applicable
-    "prefer-reflect": 0,
-    // suggest using template literals instead of string concatenation
-    // http://eslint.org/docs/rules/prefer-template
-    "prefer-template": 2,
-    // disallow generator functions that do not have yield
-    "require-yield": 2,
+    "prefer-reflect": ["off"],
+
     // flag usage of arguments variables
-    "prefer-rest-params": 2,
+    "prefer-rest-params": ["error"],
+
+    // suggest using the spread operator instead of .apply()
+    "prefer-spread": ["error"],
+
+    // suggest using template literals instead of string concatenation
+    "prefer-template": ["error"],
+
+    // Disallow async functions which have no await expression
+    "require-await": ["error"],
+
+    // disallow generator functions that do not have yield
+    "require-yield": ["error"],
+
+    // Enforce spacing between rest and spread operators and their expressions
+    "rest-spread-spacing": ["error", "never"],
+
     // babel inserts `"use strict";` for us
-    "strict": [2, "never"]
+    "strict": ["error", "never"],
+
+    // require symbol description
+    "symbol-description": ["error"],
+
+    // maintain consistency around the spacing inside of template literals
+    "template-curly-spacing": ["error", "never"],
+
+    // Require or disallow spacing between template tags and their literals
+    "template-tag-spacing": ["error", "never"],
+
+    // requires to declare all vars on top of their containing scope
+    "vars-on-top": ["off"],
+
+    // spacing consistency for generators
+    "yield-star-spacing": ["error", { "before": false, "after": true }],
   }
 };
