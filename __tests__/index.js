@@ -78,7 +78,7 @@ export default SearchInputModel.extend({
       properties: {
         dealerId,
         dealerName,
-        startPoint
+        startPoint,
       }
     });
   }
@@ -91,19 +91,25 @@ let a;
 something = 1;
 `;
 
+const invalidES5 = `
+function test() {
+  var a = [
+    1,
+    2,
+  ];
+  a.push(arguments.callee);
+  var b = {};
+  b.__defineGetter__('tom', test);
+}
+`;
+
 describe("flags no warnings with valid js", () => {
   let cli, result;
 
   beforeEach(() => {
     cli = new CLIEngine({
-      extends: ["../es6.js"],
-      env: {
-        "es6": true,
-        "browser": true
-      },
-      "parserOptions": {
-        "sourceType": "module"
-      }
+      useEslintrc: false,
+      configFile: "__tests__/.eslintrc-index"
     });
   });
 
@@ -118,19 +124,34 @@ describe("flags no warnings with valid js", () => {
   });
 });
 
+describe("handles legacy JS", () => {
+  let cli, result;
+
+  beforeEach(() => {
+    cli = new CLIEngine({
+      useEslintrc: false,
+      configFile: "__tests__/.eslintrc-legacy"
+    });
+  });
+
+  it("doesn't parse ES6", () => {
+    result = cli.executeOnText(validJS).results[0];
+    expect(result.errorCount).toBe(1);
+  });
+
+  it("follows legacy rules", () => {
+    result = cli.executeOnText(invalidES5).results[0];
+    expect(result.errorCount).toBe(7);
+  });
+});
+
 describe("flags warnings with invalid js", () => {
   let cli, result;
 
   beforeEach(() => {
     cli = new CLIEngine({
-      extends: ["../es6.js"],
-      env: {
-        "es6": true,
-        "browser": true
-      },
-      "parserOptions": {
-        "sourceType": "module"
-      }
+      useEslintrc: false,
+      configFile: "__tests__/.eslintrc-index"
     });
   });
 
@@ -157,30 +178,5 @@ describe("flags warnings with invalid js", () => {
   it("correct severity for error", () => {
     result = cli.executeOnText(invalidJS).results[0];
     expect(result.messages[0].severity).toBe(2);
-  });
-
-  it("did warn", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.warningCount).toBe(1);
-  });
-
-  it("correct warning text", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[1].message).toBe("'something' is not defined.");
-  });
-
-  it("correct warning rule", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[1].ruleId).toBe("no-undef");
-  });
-
-  it("correct line number for warning", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[1].line).toBe(3);
-  });
-
-  it("correct severity for warning", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[1].severity).toBe(1);
   });
 });

@@ -4,16 +4,22 @@ This package provides pro!vision's ESLint configuration as an extensible shared 
 
 _Inspired by [Airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)_
 
+## Versions
+
+This is version >= 2.0.0 of eslint-config-pv, which is compatible with eslint >= 4.0.0. I you are using eslint 3, use eslint-config-pv 1.0.10
 
 ## Installation
 ```bash
 npm install --save-dev eslint-config-pv
+# for the eslint 3 compatible version
+npm install --save-dev eslint-config-pv@1.0.10
 ```
 
 
 ## Usage
 
 We export two ESLint configurations for usage in projects.
+
 
 ### eslint-config-pv
 

@@ -1,0 +1,7 @@
+{
+  "extends": ["../legacy.js"],
+  "env": {
+    "es6": false,
+    "browser": true
+  }
+}

@@ -1,6 +1,6 @@
 {
   "extends": [
-    "./es6.js"
+    "./index.js"
   ],
   "rules": {
     "no-magic-numbers": 0,

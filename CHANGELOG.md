@@ -1,18 +1,51 @@
+# 2.0.0
+
+-   Changed: Compatible with eslint 4.6.1
+-   Changed: added `"array-bracket-newline": ["error", { "multiline": false, "minItems": 2 }]`
+-   Changed: added `"array-element-newline": ["off"]`
+-   Changed: added `"capitalized-comments": ["off"]`
+-   Changed: added `"class-methods-use-this": ["off"]`
+-   Changed: added `"for-direction": ["error"]`
+-   Changed: added `"func-call-spacing": ["error", "never"]`
+-   Changed: added `"func-name-matching": ["off"]`
+-   Changed: added `"indent": ["error", 2, { "SwitchCase": 1 }]`
+-   Changed: added `"line-comment-position": ["off"]`
+-   Changed: added `"linebreak-style": ["error", "unix"]`
+-   Changed: added `"multiline-ternary": ["error", "always-multiline"]`
+-   Changed: added `"newline-before-return": ["off"]`
+-   Changed: added `"no-mixed-operators": ["error"]`
+-   Changed: added `"no-restricted-globals": ["error", "event"]`
+-   Changed: added `"no-shadow": ["error", { "hoist": "functions" }]`
+-   Changed: added `"no-warning-comments": ["error", { "terms": ["todo", "fixme", "hack", "hacky"], "location": "start" }]`
+-   Changed: added `"object-curly-newline": ["off"]`
+-   Changed: added `"padding-line-between-statements": ["off"]`
+-   Changed: added `"prefer-destructuring": ["off"]`
+-   Changed: added `"prefer-promise-reject-errors": ["off"]`
+-   Changed: added `"require-jsdoc": ["off"]`
+-   Changed: added `"rest-spread-spacing": ["error", "never"]`
+-   Changed: added `"semi-style": ["error", "last"]`
+-   Changed: added `"symbol-description": ["error"]`
+-   Changed: added `"template-tag-spacing": ["error", "never"]`
+-   Changed: added `"unicode-bom": ["error", "never"]`
+-   Changed: added `"getter-return": ["error"]`
+-   Changed: added `"function-paren-newline": ["off"]`
+
+
 # 1.0.10
 
-- Changed: curly to ["error", "multi-line", "consistent"]
+-   Changed: curly to: "error", "multi-line", "consistent"
 
 # 1.0.9
 
-[Skipped because of publishing issues]
+(Skipped because of publishing issues))
 
 # 1.0.8
 
-[Skipped because of publishing issues]
+(Skipped because of publishing issues)
 
 # 1.0.7
 
-- Updated: license
+-   Updated: license
 
 # 1.0.6
 
@@ -25,8 +58,8 @@
 # 1.0.4
 
 -   Changed: no-magic-numbers to 0
--   Changed: object-property-newline: [2, { "allowMultiplePropertiesPerLine": true }]
--   Changed: quote-props: [2, "as-needed", { "keywords": true, "unnecessary": true }]
+-   Changed: object-property-newline: (2, { "allowMultiplePropertiesPerLine": true })
+-   Changed: quote-props: (2, "as-needed", { "keywords": true, "unnecessary": true })
 -   Changed: merged all rules into fewer files
 
 # 1.0.3

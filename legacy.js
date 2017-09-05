@@ -1,14 +1,29 @@
 module.exports = {
   extends: [
-    "./rules/legacy",
-    "./rules/node",
+    "./rules/4-0",
+    "./rules/4-2",
+    "./rules/4-6",
   ].map(require.resolve),
   env: {
-    "browser": true,
-    "jasmine": true,
-    "node": true
+    browser: true,
+    node: false,
+    amd: false,
+    mocha: false,
+    jasmine: false
   },
-  ecmaFeatures: {},
-  globals: {},
-  rules: {}
+  rules: {
+    "comma-dangle": ["error", "never"],
+    "vars-on-top": "error",
+    "no-restricted-properties": ["error", {
+      object: "arguments",
+      property: "callee",
+      message: "arguments.callee is deprecated",
+    }, {
+      property: "__defineGetter__",
+      message: "Please use Object.defineProperty instead.",
+    }, {
+      property: "__defineSetter__",
+      message: "Please use Object.defineProperty instead.",
+    }]
+  }
 };
