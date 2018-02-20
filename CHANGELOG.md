@@ -1,3 +1,7 @@
+# 2.1.1
+
+- Changed: made prettier optional
+
 # 2.1.0
 
 - Changed: added prettier compatibility

@@ -10,15 +10,15 @@ This is version >= 2.0.0 of eslint-config-pv, which is compatible with eslint >=
 
 ## Installation
 ```bash
-npm install --save-dev eslint-config-pv
+npm install --save-dev eslint-config-pv eslint-plugin-import
 # for the eslint 3 compatible version
-npm install --save-dev eslint-config-pv@1.0.10
+npm install --save-dev eslint-config-pv@1.0.10 eslint-plugin-import
 ```
 
 
 ## Usage
 
-We export two ESLint configurations for usage in projects.
+We export three ESLint configurations for usage in projects.
 
 
 ### eslint-config-pv
@@ -48,6 +48,23 @@ Use the legacy sub package if you only want to lint ES5 and below.
   "rules": {
     // additional rules here
   }
+}
+```
+
+### eslint-config-pv/prettier
+
+You need to install additional plugins:
+
+
+```bash
+npm install --save-dev eslint-config-prettier eslint-plugin-prettier prettier
+```
+
+This allows you to use prettier with eslint integration
+
+```
+{
+  "extends": "pv/prettier"
 }
 ```
 
