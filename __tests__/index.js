@@ -119,7 +119,6 @@ describe("flags no warnings with valid js", () => {
 
   it("did not error", () => {
     result = cli.executeOnText(validJS).results[0];
-    console.log(result); // no-
     expect(result.errorCount).toBe(0);
   });
 
