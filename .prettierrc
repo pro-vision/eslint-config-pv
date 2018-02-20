@@ -1,0 +1,9 @@
+# .prettierrc
+arrowParens: avoid
+bracketSpacing: true
+printWidth: 80
+proseWrap: true
+semi: true
+singleQuote: false
+tabWidth: 2
+trailingComma: all
