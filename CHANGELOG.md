@@ -1,3 +1,7 @@
+# 2.1.0
+
+- Changed: added prettier compatibility
+
 # 2.0.0
 
 -   Changed: Compatible with eslint 4.6.1
