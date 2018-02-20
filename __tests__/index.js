@@ -6,6 +6,11 @@ const validJS = `
 import _ from "underscore";
 import SearchInputModel from "search-input-model";
 
+const a = (b) => b;
+const v = b => b;
+a();
+v();
+
 export default SearchInputModel.extend({
 
   /**
@@ -41,8 +46,7 @@ export default SearchInputModel.extend({
     let searchString = "";
     if (_.isString(searchInput)) {
       searchString = searchInput;
-    }
-    else if (_.isObject(searchInput) && _.isString(searchInput.searchString)) {
+    } else if (_.isObject(searchInput) && _.isString(searchInput.searchString)) {
       searchString = searchInput.searchString;
     }
     this.set("startPoint", searchString);
@@ -115,6 +119,7 @@ describe("flags no warnings with valid js", () => {
 
   it("did not error", () => {
     result = cli.executeOnText(validJS).results[0];
+    console.log(result); // no-
     expect(result.errorCount).toBe(0);
   });
 

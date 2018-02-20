@@ -38,9 +38,10 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint . --ignore-path .gitignore",
     "lint:md": "remark . --frail --use lint --quiet",
-    "pretest": "npm run lint",
+    "_pretest": "npm run lint",
     "release": "npmpub",
     "test": "jest",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "watch": "jest --watch"
   },
   "main": "es6.js",
@@ -52,6 +53,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "eslint": "4.6.1",
+    "eslint-config-prettier": "2.9.0",
     "eslint-plugin-import": "2.7.0",
     "github-release-from-changelog": "1.2.1",
     "jest": "21.0.1",

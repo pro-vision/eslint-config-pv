@@ -5,7 +5,9 @@ module.exports = {
     "./rules/4-6",
     "./rules/es6",
     "./rules/es6-plugins"
-  ].map(require.resolve),
+  ].map(require.resolve).concat([
+    "prettier"
+  ]),
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: "module",
