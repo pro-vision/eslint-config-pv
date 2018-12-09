@@ -6,7 +6,7 @@ const validJS = `
 import _ from "underscore";
 import SearchInputModel from "search-input-model";
 
-const a = (b) => b;
+const a = b => b;
 const v = b => b;
 a();
 v();
@@ -46,7 +46,8 @@ export default SearchInputModel.extend({
     let searchString = "";
     if (_.isString(searchInput)) {
       searchString = searchInput;
-    } else if (_.isObject(searchInput) && _.isString(searchInput.searchString)) {
+    }
+    else if (_.isObject(searchInput) && _.isString(searchInput.searchString)) {
       searchString = searchInput.searchString;
     }
     this.set("startPoint", searchString);
@@ -113,7 +114,7 @@ describe("flags no warnings with valid js", () => {
   beforeEach(() => {
     cli = new CLIEngine({
       useEslintrc: false,
-      configFile: "__tests__/.eslintrc-index"
+      configFile: "__tests__/.eslintrc-index",
     });
   });
 
@@ -134,7 +135,7 @@ describe("handles legacy JS", () => {
   beforeEach(() => {
     cli = new CLIEngine({
       useEslintrc: false,
-      configFile: "__tests__/.eslintrc-legacy"
+      configFile: "__tests__/.eslintrc-legacy",
     });
   });
 
@@ -155,7 +156,7 @@ describe("flags warnings with invalid js", () => {
   beforeEach(() => {
     cli = new CLIEngine({
       useEslintrc: false,
-      configFile: "__tests__/.eslintrc-index"
+      configFile: "__tests__/.eslintrc-index",
     });
   });
 

@@ -1,12 +1,16 @@
 {
   "name": "eslint-config-pv",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "pro!vision ESLint configuration. Can be adapted and adjusted in each project.",
   "author": {
     "name": "pro!vision GmbH",
     "url": "http://www.pro-vision.de"
   },
   "contributors": [
+    {
+      "name": "Ingo Fahrentholz",
+      "email": "ifahrentholz@pro-vision.de"
+    },
     {
       "name": "David Ding",
       "email": "dding@pro-vision.de"
@@ -50,12 +54,12 @@
   ],
   "license": "Apache-2.0",
   "devDependencies": {
-    "eslint": "4.6.1",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-prettier": "2.6.0",
-    "jest": "21.0.1",
-    "prettier": "1.10.2"
+    "eslint": "5.10.0",
+    "eslint-config-prettier": "3.3.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "jest": "23.6.0",
+    "prettier": "1.15.3"
   },
   "dependencies": {}
 }
