@@ -10,7 +10,7 @@ module.exports = {
     ecmaVersion: 2017,
     sourceType: "module",
     ecmaFeatures: {
-      experimentalObjectRestSpread: true,
+      "parserOptions.ecmaVersion": true,
     },
   },
   rules: {
