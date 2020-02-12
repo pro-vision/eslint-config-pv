@@ -42,7 +42,8 @@ module.exports = {
     "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/no-namespace": "error",
     "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
-    "@typescript-eslint/no-non-null-assertion": "warn",
+    // no additional linting when the developer has has decided to use non null assertion
+    "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-parameter-properties": "off",
     "@typescript-eslint/no-require-imports": "off",
     "@typescript-eslint/no-this-alias": "error",
