@@ -7,7 +7,7 @@ module.exports = {
     "./rules/es6-plugins"
   ].map(require.resolve),
   parserOptions: {
-    ecmaVersion: 2017,
+    ecmaVersion: 2020,
     sourceType: "module",
     ecmaFeatures: {
       "parserOptions.ecmaVersion": true,
