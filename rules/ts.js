@@ -54,7 +54,7 @@ module.exports = {
     "@typescript-eslint/no-unnecessary-type-arguments": "off",
     "@typescript-eslint/no-unnecessary-type-assertion": "off",
     "@typescript-eslint/no-unused-expressions": ["error"],
-    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "@typescript-eslint/no-unused-vars-experimental": "off",
     "@typescript-eslint/no-use-before-define": ["warn"],
     "@typescript-eslint/no-useless-constructor": ["error"],
