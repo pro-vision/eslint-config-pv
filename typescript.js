@@ -3,5 +3,6 @@ module.exports = {
   extends: [
     "./index",
     "./rules/ts-reset",
+    "./rules/ts",
   ],
 };
