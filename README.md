@@ -74,7 +74,7 @@ for more information.
 
 ### eslint-config-pv/typescript
 
-You need to install additional plugins:
+You need to install additional @typescript-eslint plugins (>=v2.19):
 
 
 ```bash
