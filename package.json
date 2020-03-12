@@ -8,20 +8,16 @@
   },
   "contributors": [
     {
+      "name": "Mehran Behzad",
+      "email": "mbehzad@pro-vision.de"
+    },
+    {
       "name": "Ingo Fahrentholz",
       "email": "ifahrentholz@pro-vision.de"
     },
     {
       "name": "David Ding",
       "email": "dding@pro-vision.de"
-    },
-    {
-      "name": "Fritz Stelluto",
-      "email": "fstelluto@pro-vision.de"
-    },
-    {
-      "name": "Matthias Hauch",
-      "email": "mhauch@pro-vision.de"
     }
   ],
   "remarkConfig": {
@@ -54,6 +50,7 @@
   ],
   "license": "Apache-2.0",
   "devDependencies": {
+    "@types/node": "13.9.0",
     "eslint": "6.2.1",
     "eslint-config-prettier": "6.1.0",
     "eslint-plugin-import": "2.18.2",
