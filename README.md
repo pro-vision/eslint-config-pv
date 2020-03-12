@@ -18,7 +18,7 @@ npm install --save-dev eslint-config-pv@1.0.10 eslint-plugin-import
 
 ## Usage
 
-We export three ESLint configurations for usage in projects.
+We export four ESLint configurations for usage in projects.
 
 
 ### eslint-config-pv
@@ -70,6 +70,40 @@ This allows you to use prettier with eslint integration
 
 See the [ESlint config docs](http://eslint.org/docs/user-guide/configuring#extending-configuration-files)
 for more information.
+
+
+### eslint-config-pv/typescript
+
+You need to install additional @typescript-eslint plugins (>=v2.19):
+
+
+```bash
+npm install --save-dev @typescript-eslint/parser  @typescript-eslint/eslint-plugin
+```
+
+This allows you to eslint your tylescript files
+
+```
+{
+  "extends": [
+    "pv/typescript",
+    // "pv/prettier" // in case you are using prettier as well
+  ]
+}
+```
+`pv/prettier` assumes your `tsconfig.json` file is in the same directory as where you call eslint. For example your projects root directory. But you can also specify this with:
+
+```
+{
+  "extends": [
+    "pv/typescript",
+  ]
+  parserOptions: {
+    project: "./my-tsconfig.json",
+    tsconfigRootDir: "my-configs/",
+  },
+}
+```
 
 
 ## WebStorm Integration

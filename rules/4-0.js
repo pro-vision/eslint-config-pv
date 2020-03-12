@@ -490,7 +490,9 @@ module.exports = {
     "no-unused-labels": ["error"],
 
     // disallow declaration of variables that are not used in the code
-    "no-unused-vars": ["error"],
+    // allow unused arguments to be prefixed with'_'
+    // e.g. `.addEventListener(_e => ...)` when argument is passed during invokation but not used in the method's body
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
 
     // disallow use of variables before they are defined
     "no-use-before-define": ["warn"],

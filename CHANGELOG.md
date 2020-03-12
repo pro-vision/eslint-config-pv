@@ -1,3 +1,11 @@
+# 2.3.0
+
+- Added: typescript rule set to be used with @typescript-eslint
+- Changed: pretier rules
+- Changed: `"no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]`
+- Changed: `"@typescript-eslint/no-non-null-assertion": "off"`
+- Updated: `ecmaVersion` to 2020
+
 # 2.1.1
 
 - Changed: made prettier optional
