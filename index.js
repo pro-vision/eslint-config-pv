@@ -4,6 +4,7 @@ module.exports = {
     "./rules/4-2",
     "./rules/4-6",
     "./rules/es6",
+    "./rules/latest",
     "./rules/es6-plugins"
   ].map(require.resolve),
   parserOptions: {
