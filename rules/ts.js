@@ -73,8 +73,10 @@ module.exports = {
     "@typescript-eslint/no-unnecessary-type-assertion": "off",
     "@typescript-eslint/no-unnecessary-type-constraint": "off",
     "@typescript-eslint/no-unsafe-assignment": "error",
-    "@typescript-eslint/no-unsafe-call": "error",
-    "@typescript-eslint/no-unsafe-member-access": "error",
+    // same as in @typescript-eslint/no-unsafe-member-access
+    "@typescript-eslint/no-unsafe-call": "off",
+    // lax usage of class members which are defined as any
+    "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/no-unsafe-return": "error",
     "@typescript-eslint/no-unused-expressions": ["error"],
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
