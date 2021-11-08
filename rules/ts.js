@@ -2,7 +2,7 @@ module.exports = {
   rules: {
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": "off",
-    "@typescript-eslint/await-thenable": "off",
+    "@typescript-eslint/await-thenable": "error",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/ban-tslint-comment": "off",
     "@typescript-eslint/ban-types": "error",
@@ -43,8 +43,8 @@ module.exports = {
     "@typescript-eslint/no-extra-parens": ["off"],
     "@typescript-eslint/no-extra-semi": ["error"],
     "@typescript-eslint/no-extraneous-class": "off",
-    "@typescript-eslint/no-floating-promises": "off",
-    "@typescript-eslint/no-for-in-array": "off",
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-for-in-array": "error",
     "@typescript-eslint/no-implicit-any-catch": "off",
     "@typescript-eslint/no-implied-eval": ["error"],
     "@typescript-eslint/no-inferrable-types": "error",
@@ -54,7 +54,7 @@ module.exports = {
     "@typescript-eslint/no-loss-of-precision": "off",
     "@typescript-eslint/no-magic-numbers": ["off"],
     "@typescript-eslint/no-misused-new": "error",
-    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-misused-promises": "error",
     "@typescript-eslint/no-namespace": "error",
     "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
     // no additional linting when the developer has has decided to use non null assertion
@@ -70,7 +70,7 @@ module.exports = {
     "@typescript-eslint/no-unnecessary-condition": "off",
     "@typescript-eslint/no-unnecessary-qualifier": "off",
     "@typescript-eslint/no-unnecessary-type-arguments": "off",
-    "@typescript-eslint/no-unnecessary-type-assertion": "off",
+    "@typescript-eslint/no-unnecessary-type-assertion": "error",
     "@typescript-eslint/no-unnecessary-type-constraint": "off",
     "@typescript-eslint/no-unsafe-assignment": "error",
     // same as in @typescript-eslint/no-unsafe-member-access
@@ -104,7 +104,9 @@ module.exports = {
     "@typescript-eslint/quotes": ["error", "double"],
     "@typescript-eslint/require-array-sort-compare": "off",
     "@typescript-eslint/require-await": ["error"],
+    // allow mixing types. e.g. age + " years"
     "@typescript-eslint/restrict-plus-operands": "off",
+    // allow non string variables in template literal e.g. `is active: ${active}`
     "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/return-await": "off",
     "@typescript-eslint/semi": ["error", "always"],
@@ -116,7 +118,7 @@ module.exports = {
     "@typescript-eslint/triple-slash-reference": "error",
     "@typescript-eslint/type-annotation-spacing": "error",
     "@typescript-eslint/typedef": "off",
-    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/unbound-method": "error",
     "@typescript-eslint/unified-signatures": "off",
   }
 };
