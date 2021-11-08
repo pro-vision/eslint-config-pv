@@ -120,5 +120,12 @@ module.exports = {
     "@typescript-eslint/typedef": "off",
     "@typescript-eslint/unbound-method": "error",
     "@typescript-eslint/unified-signatures": "off",
+    "@typescript-eslint/consistent-type-exports": "off",
+    "@typescript-eslint/no-meaningless-void-operator": "off",
+    "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "off",
+    "@typescript-eslint/no-restricted-imports": "off",
+    "@typescript-eslint/no-unsafe-argument": "error",
+    "@typescript-eslint/padding-line-between-statements": "off",
+    "@typescript-eslint/prefer-return-this-type": "off",
   }
 };

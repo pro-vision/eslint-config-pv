@@ -1,4 +1,4 @@
-// list of eslint rules newer that 4.x and es6 rules which are provided in other files already,
+// list of eslint rules newer that 4.x and es6 rules which aren't provided in other files already,
 // including eslint:recommended rules
 module.exports = {
   "rules": {
@@ -31,6 +31,7 @@ module.exports = {
     "no-unreachable-loop": "off",
     "no-unsafe-negation": "error",
     "no-unsafe-optional-chaining": "off",
+    "no-unused-private-class-members": "off",
     "no-useless-backreference": "off",
     "no-useless-catch": "error",
     "prefer-exponentiation-operator": "off",

@@ -74,10 +74,10 @@ for more information.
 
 ### eslint-config-pv/typescript
 
-You need to install additional @typescript-eslint plugins (>=v4.15):
+You need to install `typescript` and additional `@typescript-eslint` plugins (>=v5.3):
 
 ```bash
-npm install --save-dev @typescript-eslint/parser  @typescript-eslint/eslint-plugin
+npm install --save-dev typescript  @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
 This allows you to eslint your typescript files
