@@ -6,7 +6,7 @@ _Inspired by [Airbnb](https://github.com/airbnb/javascript/tree/master/packages/
 
 ## Versions
 
-This is version >= 2.0.0 of eslint-config-pv, which is compatible with eslint >= 4.0.0. I you are using eslint 3, use eslint-config-pv 1.0.10
+This is version >= 3.0.0 of eslint-config-pv, which is compatible with eslint >= 7.21. If you are using eslint 3, use eslint-config-pv 1.0.10
 
 ## Installation
 ```bash
@@ -74,16 +74,15 @@ for more information.
 
 ### eslint-config-pv/typescript
 
-You need to install additional @typescript-eslint plugins (>=v2.19):
-
+You need to install `typescript` and additional `@typescript-eslint` plugins (>=v5.3):
 
 ```bash
-npm install --save-dev @typescript-eslint/parser  @typescript-eslint/eslint-plugin
+npm install --save-dev typescript  @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
-This allows you to eslint your tylescript files
+This allows you to eslint your typescript files
 
-```
+```json
 {
   "extends": [
     "pv/typescript",
@@ -91,9 +90,10 @@ This allows you to eslint your tylescript files
   ]
 }
 ```
-`pv/prettier` assumes your `tsconfig.json` file is in the same directory as where you call eslint. For example your projects root directory. But you can also specify this with:
 
-```
+`pv/typescript` assumes your `tsconfig.json` file is in the same directory as where you call eslint. For example your projects root directory. But you can also specify this with:
+
+```json
 {
   "extends": [
     "pv/typescript",
@@ -104,7 +104,6 @@ This allows you to eslint your tylescript files
   },
 }
 ```
-
 
 ## WebStorm Integration
 Ensure you are using `node >= 4.5` and you have installed `eslint` and `eslint-plugin-import` globally:

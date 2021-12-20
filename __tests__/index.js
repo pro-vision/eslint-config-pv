@@ -1,7 +1,7 @@
 /* eslint-disable strict */
 "use strict";
 
-const CLIEngine = require("eslint").CLIEngine;
+const ESLint = require("eslint").ESLint;
 const validJS = `
 import _ from "underscore";
 import SearchInputModel from "search-input-model";
@@ -109,79 +109,79 @@ function test() {
 `;
 
 describe("flags no warnings with valid js", () => {
-  let cli, result;
+  let eslint, results;
 
   beforeEach(() => {
-    cli = new CLIEngine({
+    eslint = new ESLint({
       useEslintrc: false,
-      configFile: "__tests__/.eslintrc-index",
+      overrideConfigFile: "__tests__/.eslintrc-index",
     });
   });
 
-  it("did not error", () => {
-    result = cli.executeOnText(validJS).results[0];
-    expect(result.errorCount).toBe(0);
+  it("did not error", async () => {
+    results = await eslint.lintText(validJS);
+    expect(results[0].errorCount).toBe(0);
   });
 
-  it("did not warn", () => {
-    result = cli.executeOnText(validJS).results[0];
-    expect(result.warningCount).toBe(0);
+  it("did not warn", async () => {
+    results = await eslint.lintText(validJS);
+    expect(results[0].warningCount).toBe(0);
   });
 });
 
 describe("handles legacy JS", () => {
-  let cli, result;
+  let eslint, results;
 
   beforeEach(() => {
-    cli = new CLIEngine({
+    eslint = new ESLint({
       useEslintrc: false,
-      configFile: "__tests__/.eslintrc-legacy",
+      overrideConfigFile: "__tests__/.eslintrc-legacy",
     });
   });
 
-  it("doesn't parse ES6", () => {
-    result = cli.executeOnText(validJS).results[0];
-    expect(result.errorCount).toBe(1);
+  it("doesn't parse ES6", async () => {
+    results = await eslint.lintText(validJS);
+    expect(results[0].errorCount).toBe(1);
   });
 
-  it("follows legacy rules", () => {
-    result = cli.executeOnText(invalidES5).results[0];
-    expect(result.errorCount).toBe(7);
+  it("follows legacy rules", async () => {
+    results = await eslint.lintText(invalidES5);
+    expect(results[0].errorCount).toBe(7);
   });
 });
 
 describe("flags warnings with invalid js", () => {
-  let cli, result;
+  let eslint, results;
 
   beforeEach(() => {
-    cli = new CLIEngine({
+    eslint = new ESLint({
       useEslintrc: false,
-      configFile: "__tests__/.eslintrc-index",
+      overrideConfigFile: "__tests__/.eslintrc-index",
     });
   });
 
-  it("did error", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.errorCount).toBe(1);
+  it("did error", async () => {
+    results = await eslint.lintText(invalidJS);
+    expect(results[0].errorCount).toBe(1);
   });
 
-  it("correct error text", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[0].message).toBe("'a' is defined but never used.");
+  it("correct error text", async () => {
+    results = await eslint.lintText(invalidJS);
+    expect(results[0].messages[0].message).toBe("'a' is defined but never used.");
   });
 
-  it("correct error rule", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[0].ruleId).toBe("no-unused-vars");
+  it("correct error rule", async () => {
+    results = await eslint.lintText(invalidJS);
+    expect(results[0].messages[0].ruleId).toBe("no-unused-vars");
   });
 
-  it("correct line number for error", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[0].line).toBe(2);
+  it("correct line number for error", async () => {
+    results = await eslint.lintText(invalidJS);
+    expect(results[0].messages[0].line).toBe(2);
   });
 
-  it("correct severity for error", () => {
-    result = cli.executeOnText(invalidJS).results[0];
-    expect(result.messages[0].severity).toBe(2);
+  it("correct severity for error", async () => {
+    results = await eslint.lintText(invalidJS);
+    expect(results[0].messages[0].severity).toBe(2);
   });
 });
