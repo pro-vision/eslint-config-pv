@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-pv",
+  "name": "@pro-vision/eslint-config-pv",
   "version": "3.0.0",
   "description": "pro!vision ESLint configuration. Can be adapted and adjusted in each project.",
   "author": {

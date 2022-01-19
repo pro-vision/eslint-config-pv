@@ -1,4 +1,4 @@
-# eslint-config-pv
+# @pro-vision/eslint-config-pv
 
 This package provides pro!vision's ESLint configuration as an extensible shared config.
 
@@ -6,11 +6,11 @@ _Inspired by [Airbnb](https://github.com/airbnb/javascript/tree/master/packages/
 
 ## Versions
 
-This is version >= 3.0.0 of eslint-config-pv, which is compatible with eslint >= 7.21. If you are using eslint 3, use eslint-config-pv 1.0.10
+This is version >= 3.0.0 of eslint-config-pv, which is compatible with eslint >= 8.1. If you are using eslint 3, use eslint-config-pv 1.0.10
 
 ## Installation
 ```bash
-npm install --save-dev eslint-config-pv eslint-plugin-import
+npm install --save-dev @pro-vision/eslint-config-pv eslint-plugin-import
 # for the eslint 3 compatible version
 npm install --save-dev eslint-config-pv@1.0.10 eslint-plugin-import
 ```
@@ -24,11 +24,11 @@ We export four ESLint configurations for usage in projects.
 ### eslint-config-pv
 
 Our default export contains all of our ESLint rules, including ECMAScript 6 / ES2015.
-Add `"extends": "pv"` to your .eslintrc:
+Add `"extends": "@pro-vision/eslint-config-pv"` to your .eslintrc:
 
 ```
 {
-  "extends": "pv",
+  "extends": "@pro-vision/eslint-config-pv",
   "rules": {
     // additional rules here
   },
@@ -44,7 +44,7 @@ Use the legacy sub package if you only want to lint ES5 and below.
 
 ```
 {
-  "extends": "pv/legacy",
+  "extends": "@pro-vision/eslint-config-pv/legacy",
   "rules": {
     // additional rules here
   }
@@ -64,7 +64,7 @@ This allows you to use prettier with eslint integration
 
 ```
 {
-  "extends": "pv/prettier"
+  "extends": "@pro-vision/eslint-config-pv/prettier"
 }
 ```
 
@@ -77,7 +77,7 @@ for more information.
 You need to install `typescript` and additional `@typescript-eslint` plugins (>=v5.3):
 
 ```bash
-npm install --save-dev typescript  @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install --save-dev typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
 This allows you to eslint your typescript files
@@ -85,18 +85,18 @@ This allows you to eslint your typescript files
 ```json
 {
   "extends": [
-    "pv/typescript",
-    // "pv/prettier" // in case you are using prettier as well
+    "@pro-vision/eslint-config-pv/typescript",
+    // "@pro-vision/eslint-config-pv/prettier" // in case you are using prettier as well
   ]
 }
 ```
 
-`pv/typescript` assumes your `tsconfig.json` file is in the same directory as where you call eslint. For example your projects root directory. But you can also specify this with:
+`@pro-vision/eslint-config-pv/typescript` assumes your `tsconfig.json` file is in the same directory as where you call eslint. For example your projects root directory. But you can also specify this with:
 
 ```json
 {
   "extends": [
-    "pv/typescript",
+    "@pro-vision/eslint-config-pv/typescript",
   ]
   parserOptions: {
     project: "./my-tsconfig.json",

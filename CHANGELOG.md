@@ -1,3 +1,10 @@
+# 3.0.0
+
+- Updated: updated rules for eslint v8.1.0 (+ recommended)
+- Updated: updated rules for @typescript-eslint v5.3.0 (+ recommended)
+- Updated: updated for eslint-plugin-prettier v4.0.0
+- Changed: move package to `@pro-vision` scope
+
 # 2.3.0
 
 - Added: typescript rule set to be used with @typescript-eslint
