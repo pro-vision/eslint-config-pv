@@ -1,6 +1,6 @@
 {
   "name": "@pro-vision/eslint-config-pv",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "pro!vision ESLint configuration. Can be adapted and adjusted in each project.",
   "author": {
     "name": "pro!vision GmbH",
