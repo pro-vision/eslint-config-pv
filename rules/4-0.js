@@ -567,7 +567,7 @@ module.exports = {
     "prefer-numeric-literals": ["off"],
 
     // require quotes around object literal property names
-    "quote-props": ["error", "as-needed", { "keywords": true, "unnecessary": true }],
+    "quote-props": ["error", "as-needed", { "keywords": false, "unnecessary": true }],
 
     // specify whether double or single quotes should be used
     "quotes": ["error", "double"],

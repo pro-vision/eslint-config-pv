@@ -1,5 +1,6 @@
 # 3.1.0
 - Changed: `lines-around-comment` to not force empty line before block comment at the beginning of Classes, Object Literals and Arrays
+- Changed: `quotes`: does not require quotes around language keywords used as object property names anymore
 
 # 3.0.0
 
