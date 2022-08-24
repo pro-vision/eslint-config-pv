@@ -40,5 +40,6 @@ module.exports = {
     "semi": "off",
     "space-before-function-paren": "off",
     "space-infix-ops": "off",
+    "space-before-blocks": "off",
   },
 };

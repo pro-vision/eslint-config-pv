@@ -40,6 +40,8 @@ module.exports = {
     "prefer-regex-literals": "off",
     "require-atomic-updates": "off",
     "require-unicode-regexp": "off",
-    "sort-keys": "off"
+    "sort-keys": "off",
+    "no-constant-binary-expression": "off",
+    "prefer-object-has-own": "off",
   }
 };

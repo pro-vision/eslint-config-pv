@@ -6,7 +6,7 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/ban-tslint-comment": "off",
     "@typescript-eslint/ban-types": "error",
-    // rules were imported from the reqular es rules
+    // rules were imported from the regular es rules
     "@typescript-eslint/brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
     "@typescript-eslint/class-literal-property-style": "off",
     "@typescript-eslint/comma-dangle": "off",
@@ -127,5 +127,11 @@ module.exports = {
     "@typescript-eslint/no-unsafe-argument": "error",
     "@typescript-eslint/padding-line-between-statements": "off",
     "@typescript-eslint/prefer-return-this-type": "off",
+    "@typescript-eslint/consistent-generic-constructors": "off",
+    "@typescript-eslint/no-duplicate-enum-values": "off",
+    "@typescript-eslint/parameter-properties": "off",
+    "@typescript-eslint/no-redundant-type-constituents": "off",
+    "@typescript-eslint/no-useless-empty-export": "off",
+    "@typescript-eslint/space-before-blocks": "off",
   }
 };

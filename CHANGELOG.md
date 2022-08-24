@@ -1,4 +1,7 @@
 # 3.1.0
+- Updated: updated rules for eslint v8.22.0
+- Updated: updated rules for @typescript-eslint v5.34.0
+- Updated: updated for eslint-plugin-prettier v4.2.1
 - Changed: `lines-around-comment` to not force empty line before block comment at the beginning of Classes, Object Literals and Arrays
 - Changed: `quotes`: does not require quotes around language keywords used as object property names anymore
 
