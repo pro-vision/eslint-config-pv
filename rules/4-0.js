@@ -121,7 +121,13 @@ module.exports = {
     "linebreak-style": ["error", "unix"],
 
     // enforces empty lines around comments
-    "lines-around-comment": ["warn", { "beforeBlockComment": true, "beforeLineComment": false }],
+    "lines-around-comment": ["warn", {
+      "beforeBlockComment": true,
+      "beforeLineComment": false,
+      "allowClassStart": true,
+      "allowObjectStart": true,
+      "allowArrayStart": true,
+    }],
 
     // specify the maximum depth that blocks can be nested
     "max-depth": ["error", 4],

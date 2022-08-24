@@ -1,3 +1,6 @@
+# 3.1.0
+- Changed: `lines-around-comment` to not force empty line before block comment at the beginning of Classes, Object Literals and Arrays
+
 # 3.0.0
 
 - Updated: updated rules for eslint v8.1.0 (+ recommended)
