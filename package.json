@@ -42,7 +42,7 @@
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "watch": "jest --watch"
   },
-  "main": "es6.js",
+  "main": "index.js",
   "keywords": [
     "eslint",
     "eslintconfig",

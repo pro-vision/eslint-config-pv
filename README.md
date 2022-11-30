@@ -9,17 +9,16 @@ _Inspired by [Airbnb](https://github.com/airbnb/javascript/tree/master/packages/
 This is version >= 3.1. of eslint-config-pv, which is compatible with eslint >= 8.22. If you are using eslint 3, use eslint-config-pv 1.0.10
 
 ## Installation
+
 ```bash
 npm install --save-dev @pro-vision/eslint-config-pv eslint-plugin-import
 # for the eslint 3 compatible version
 npm install --save-dev eslint-config-pv@1.0.10 eslint-plugin-import
 ```
 
-
 ## Usage
 
 We export four ESLint configurations for usage in projects.
-
 
 ### eslint-config-pv
 
@@ -55,7 +54,6 @@ Use the legacy sub package if you only want to lint ES5 and below.
 
 You need to install additional plugins:
 
-
 ```bash
 npm install --save-dev eslint-config-prettier eslint-plugin-prettier prettier
 ```
@@ -70,7 +68,6 @@ This allows you to use prettier with eslint integration
 
 See the [ESlint config docs](http://eslint.org/docs/user-guide/configuring#extending-configuration-files)
 for more information.
-
 
 ### eslint-config-pv/typescript
 
@@ -106,7 +103,9 @@ This allows you to eslint your typescript files
 ```
 
 ## WebStorm Integration
+
 Ensure you are using `node >= 4.5` and you have installed `eslint` and `eslint-plugin-import` globally:
+
 ```bash
 # node version should be at least 4.5
 node -v
