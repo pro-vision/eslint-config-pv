@@ -1,18 +1,26 @@
-# 3.1.0
+# Changelog
+
+## 3.2.0
+
+- Updated: updated rules for eslint up to v8.44.0
+- Updated: updated rules for @typescript-eslint up to v5.60.1
+
+## 3.1.0
+
 - Updated: updated rules for eslint v8.22.0
 - Updated: updated rules for @typescript-eslint v5.34.0
 - Updated: updated for eslint-plugin-prettier v4.2.1
 - Changed: `lines-around-comment` to not force empty line before block comment at the beginning of Classes, Object Literals and Arrays
 - Changed: `quotes`: does not require quotes around language keywords used as object property names anymore
 
-# 3.0.0
+## 3.0.0
 
 - Updated: updated rules for eslint v8.1.0 (+ recommended)
 - Updated: updated rules for @typescript-eslint v5.3.0 (+ recommended)
 - Updated: updated for eslint-plugin-prettier v4.0.0
 - Changed: move package to `@pro-vision` scope
 
-# 2.3.0
+## 2.3.0
 
 - Added: typescript rule set to be used with @typescript-eslint
 - Changed: pretier rules
@@ -20,15 +28,15 @@
 - Changed: `"@typescript-eslint/no-non-null-assertion": "off"`
 - Updated: `ecmaVersion` to 2020
 
-# 2.1.1
+## 2.1.1
 
 - Changed: made prettier optional
 
-# 2.1.0
+## 2.1.0
 
 - Changed: added prettier compatibility
 
-# 2.0.0
+## 2.0.0
 
 -   Changed: Compatible with eslint 4.6.1
 -   Changed: added `"array-bracket-newline": ["off"]`
@@ -61,50 +69,50 @@
 -   Changed: added `"function-paren-newline": ["off"]`
 
 
-# 1.0.10
+## 1.0.10
 
 -   Changed: curly to: "error", "multi-line", "consistent"
 
-# 1.0.9
+## 1.0.9
 
 (Skipped because of publishing issues))
 
-# 1.0.8
+## 1.0.8
 
 (Skipped because of publishing issues)
 
-# 1.0.7
+## 1.0.7
 
 -   Updated: license
 
-# 1.0.6
+## 1.0.6
 
 -   Changed: disabled no-new
 
-# 1.0.5
+## 1.0.5
 
 -   Changed: Moved strict to es6.js
 
-# 1.0.4
+## 1.0.4
 
 -   Changed: no-magic-numbers to 0
 -   Changed: object-property-newline: (2, { "allowMultiplePropertiesPerLine": true })
 -   Changed: quote-props: (2, "as-needed", { "keywords": true, "unnecessary": true })
 -   Changed: merged all rules into fewer files
 
-# 1.0.3
+## 1.0.3
 
 -   Added: tests
 
-# 1.0.2
+## 1.0.2
 
 -   Fixed: testing transferring ownership
 
-# 1.0.1
+## 1.0.1
 
 -   Changed: publishing through npmpub
 -   Removed: grunt
 
-# 1.0.0
+## 1.0.0
 
 -   Initial release
