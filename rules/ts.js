@@ -133,5 +133,14 @@ module.exports = {
     "@typescript-eslint/no-redundant-type-constituents": "off",
     "@typescript-eslint/no-useless-empty-export": "off",
     "@typescript-eslint/space-before-blocks": "off",
+    "@typescript-eslint/block-spacing": "off",
+    "@typescript-eslint/key-spacing": "off",
+    "@typescript-eslint/lines-around-comment": "off",
+    "@typescript-eslint/no-duplicate-type-constituents": "off",
+    "@typescript-eslint/no-import-type-side-effects": "off",
+    "@typescript-eslint/no-mixed-enums": "off",
+    "@typescript-eslint/no-unsafe-declaration-merging": "off",
+    "@typescript-eslint/no-unsafe-enum-comparison": "off",
+    "@typescript-eslint/sort-type-constituents": "off",
   }
 };

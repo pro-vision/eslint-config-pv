@@ -43,5 +43,8 @@ module.exports = {
     "sort-keys": "off",
     "no-constant-binary-expression": "off",
     "prefer-object-has-own": "off",
+    "logical-assignment-operators": "off",
+    "no-empty-static-block": "off",
+    "no-new-native-nonconstructor": "off",
   }
 };
