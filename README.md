@@ -11,7 +11,7 @@ Rules mostly follow:
 
 ## Versions
 
-This is version >= 3.1. of eslint-config-pv, which is compatible with eslint >= 8.22. If you are using eslint 3, use eslint-config-pv 1.0.10
+This is version >= 3.1. of eslint-config-pv, which is compatible with eslint >= 8.45. If you are using eslint 3, use eslint-config-pv 1.0.10
 
 ## Installation
 
@@ -76,7 +76,7 @@ for more information.
 
 ### eslint-config-pv/typescript
 
-You need to install `typescript` and additional `@typescript-eslint` plugins (>=v5.34):
+You need to install `typescript` and additional `@typescript-eslint` plugins (>=v6.1.0):
 
 ```bash
 npm install --save-dev typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
