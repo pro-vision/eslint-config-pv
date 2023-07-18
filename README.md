@@ -4,6 +4,11 @@ This package provides pro!vision's ESLint configuration as an extensible shared 
 
 _Inspired by [Airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)_
 
+Rules mostly follow:
+
+- eslint:recommended
+- @typescript-eslint/recommended
+
 ## Versions
 
 This is version >= 3.1. of eslint-config-pv, which is compatible with eslint >= 8.22. If you are using eslint 3, use eslint-config-pv 1.0.10

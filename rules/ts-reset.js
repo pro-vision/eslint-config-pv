@@ -41,5 +41,8 @@ module.exports = {
     "space-before-function-paren": "off",
     "space-infix-ops": "off",
     "space-before-blocks": "off",
+    "block-spacing": "off",
+    "key-spacing": "off",
+    "lines-around-comment": "off",
   },
 };
