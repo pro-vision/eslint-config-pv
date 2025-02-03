@@ -17,7 +17,7 @@ module.exports = {
     "@typescript-eslint/consistent-type-imports": "off",
     "@typescript-eslint/default-param-last": "off",
     "@typescript-eslint/dot-notation": "off",
-    "@typescript-eslint/explicit-function-return-type": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-member-accessibility": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/func-call-spacing": ["error", "never"],
@@ -45,7 +45,9 @@ module.exports = {
     "@typescript-eslint/no-floating-promises": "error",
     "@typescript-eslint/no-for-in-array": "error",
     "@typescript-eslint/no-implied-eval": ["error"],
-    "@typescript-eslint/no-inferrable-types": "error",
+    // lax to allow consistent type definition for all class's properties for example
+    // independent of them having a default value or not
+    "@typescript-eslint/no-inferrable-types": ["error", { ignoreParameters: true, ignoreProperties: true }],
     "@typescript-eslint/no-invalid-this": "off",
     "@typescript-eslint/no-invalid-void-type": "off",
     "@typescript-eslint/no-loop-func": "off",
@@ -147,5 +149,10 @@ module.exports = {
     "@typescript-eslint/no-unsafe-declaration-merging": "error",
     "@typescript-eslint/no-unsafe-enum-comparison": "error",
     "@typescript-eslint/sort-type-constituents": "off",
+    "@typescript-eslint/no-array-delete": "error",
+    "@typescript-eslint/no-unsafe-unary-minus": "error",
+    "@typescript-eslint/only-throw-error": "error",
+    // allow using reject with only errors as argument unless `reject()`
+    "@typescript-eslint/prefer-promise-reject-errors": ["error", {"allowEmptyReject": true}],
   }
 };

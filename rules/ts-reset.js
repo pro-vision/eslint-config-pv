@@ -33,6 +33,7 @@ module.exports = {
     "no-use-before-define": "off",
     "no-useless-constructor": "off",
     "object-curly-spacing": "off",
+    "prefer-promise-reject-errors": "off",
     "quotes": "off",
     "require-await": "off",
     "no-return-await": "off",
