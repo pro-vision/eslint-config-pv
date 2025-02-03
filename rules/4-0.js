@@ -3,26 +3,12 @@ module.exports = {
     // enforces getter/setter pairs in objects
     "accessor-pairs": ["off"],
 
-    // enforce line breaks after opening and before closing array brackets
-    "array-bracket-newline": ["off"],
-
-    // enforce spacing inside array brackets
-    "array-bracket-spacing": ["warn", "never"],
 
     // enforces usage of return statement in callbacks of array’s methods
     "array-callback-return": ["error"],
 
-    // enforce line breaks between array elements
-    "array-element-newline": ["off"],
-
     // treat var statements as if they were block scoped
     "block-scoped-var": ["error"],
-
-    // Disallow or enforce spaces inside of single line blocks
-    "block-spacing": ["error", "always"],
-
-    // enforce one true brace style
-    "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
 
     // enforce return after a callback
     "callback-return": ["off"],
@@ -33,20 +19,8 @@ module.exports = {
     // enforce or disallow capitalization of the first letter of a comment
     "capitalized-comments": ["off"],
 
-    // disallow trailing commas in object literals
-    "comma-dangle": ["off"],
-
-    // enforce spacing before and after comma
-    "comma-spacing": ["error", { "before": false, "after": true }],
-
-    // enforce one true comma style
-    "comma-style": ["error", "last"],
-
     // specify the maximum cyclomatic complexity allowed in a program
     "complexity": ["off"],
-
-    // disallow padding inside computed properties
-    "computed-property-spacing": ["error", "never"],
 
     // require return statements to either always or never specify values
     "consistent-return": ["off"],
@@ -60,14 +34,8 @@ module.exports = {
     // require default case in switch statements
     "default-case": ["off"],
 
-    // enforces consistent newlines before or after dots
-    "dot-location": ["off"],
-
     // encourages use of dot notation whenever possible
     "dot-notation": ["error"],
-
-    // enforce newline at the end of file, with no multiple empty lines
-    "eol-last": ["off"],
 
     // require the use of === and !==
     "eqeqeq": ["error"],
@@ -105,29 +73,12 @@ module.exports = {
     // this option sets a specific tab width for your code
     "id-length": ["off"],
 
-    // require identifiers to match the provided regular expression
-    "indent": ["error", 2, { "SwitchCase": 1 }],
 
     // enforce or disallow variable initializations at definition
     "init-declarations": ["off"],
 
-    // enforces spacing between keys and values in object literal properties
-    "key-spacing": ["warn", { "beforeColon": false, "afterColon": true }],
-
     // enforce position of line comments
     "line-comment-position": ["off"],
-
-    // disallow mixed "LF" and "CRLF" as linebreaks
-    "linebreak-style": ["error", "unix"],
-
-    // enforces empty lines around comments
-    "lines-around-comment": ["warn", {
-      "beforeBlockComment": true,
-      "beforeLineComment": false,
-      "allowClassStart": true,
-      "allowObjectStart": true,
-      "allowArrayStart": true,
-    }],
 
     // specify the maximum depth that blocks can be nested
     "max-depth": ["error", 4],
@@ -150,23 +101,14 @@ module.exports = {
     // specify the maximum number of statement allowed in a function
     "max-statements": ["off"],
 
-    // enforce or disallow newlines between operands of ternary expressions
-    "multiline-ternary": ["error", "always-multiline"],
-
     // require a capital letter for constructors
     "new-cap": ["off"],
-
-    // disallow the omission of parentheses when invoking a constructor with no arguments
-    "new-parens": ["error"],
 
     // allow/disallow an empty newline after var statement
     "newline-after-var": ["off"],
 
     // require an empty line before return statements
     "newline-before-return": ["off"],
-
-    //  requires a newline after each call in a method chain or deep member access if the chain is deeper than 2
-    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
 
     // disallow the use of alert, confirm, and prompt
     "no-alert": ["error"],
@@ -194,9 +136,6 @@ module.exports = {
 
     // disallow assignment in conditional expressions
     "no-cond-assign": ["error"],
-
-    // warns against using the arrow function syntax in places where it could be confused with a comparison operator.
-    "no-confusing-arrow": ["error", { "allowParens": true }],
 
     // disallow use of console
     "no-console": ["error"],
@@ -267,17 +206,8 @@ module.exports = {
     //  eliminates unnecessary labels
     "no-extra-label": ["error"],
 
-    // disallow unnecessary parentheses
-    "no-extra-parens": ["off"],
-
-    // disallow unnecessary semicolons
-    "no-extra-semi": ["error"],
-
     // disallow fallthrough of case statements
     "no-fallthrough": ["error"],
-
-    // disallow the use of leading or trailing decimal points in numeric literals
-    "no-floating-decimal": ["error"],
 
     // disallow overwriting functions written as function declarations
     "no-func-assign": ["error"],
@@ -339,14 +269,8 @@ module.exports = {
     // disallow mixed spaces and tabs for indentation
     "no-mixed-spaces-and-tabs": ["error"],
 
-    // disallow use of multiple spaces
-    "no-multi-spaces": ["error"],
-
     // disallow use of multiline strings
     "no-multi-str": ["error"],
-
-    // disallow multiple empty lines and only one newline at the end
-    "no-multiple-empty-lines": ["warn", {"max": 2}],
 
     // disallow reassignments of native objects
     "no-native-reassign": ["error"],
@@ -459,9 +383,6 @@ module.exports = {
     // restrict what can be thrown as an exception
     "no-throw-literal": ["error"],
 
-    // disallow trailing whitespace at the end of lines
-    "no-trailing-spaces": ["error"],
-
     // disallow use of undefined when initializing variables
     "no-undef-init": ["off"],
 
@@ -527,26 +448,9 @@ module.exports = {
     // disallow usage of configurable warning terms in comments: e.g. todo
     "no-warning-comments": ["error", { "terms": ["todo", "fixme", "hack", "hacky"], "location": "start" }],
 
-    // alerts for whitespace around the dot or before the opening bracket before properties of objects if they are on the same line
-    "no-whitespace-before-property": ["warn"],
 
     // disallow use of the with statement
     "no-with": ["error"],
-
-    // enforce the location of single-line statements
-    "nonblock-statement-body-position": ["off"],
-
-    // enforce consistent line breaks inside braces
-    "object-curly-newline": ["off"],
-
-    // require padding inside curly braces
-    "object-curly-spacing": ["off"],
-
-    // require that object properties be placed on separate lines for better readability
-    "object-property-newline": ["error", { "allowMultiplePropertiesPerLine": true }],
-
-    // enforces consistent coding style where newlines are required or disallowed after each var declaration or just when there's a var initialization
-    "one-var-declaration-per-line": ["error", "initializations"],
 
     // allow just one var statement per function
     "one-var": ["error", { "uninitialized": "always", "initialized": "never" }],
@@ -554,23 +458,8 @@ module.exports = {
     // require assignment operator shorthand where possible or prohibit it entirely
     "operator-assignment": ["warn", "always"],
 
-    // enforce operators to be placed before or after line breaks
-    "operator-linebreak": ["error", "before", { "overrides": { "=": "after" } }],
-
-    // enforce padding within blocks
-    "padded-blocks": ["off"],
-
-    // requires or disallows blank lines between the given 2 kinds of statements. Properly blank lines help developers to understand the code
-    "padding-line-between-statements": ["off"],
-
     // disallow parseInt() and Number.parseInt() in favor of binary, octal, and hexadecimal literals
     "prefer-numeric-literals": ["off"],
-
-    // require quotes around object literal property names
-    "quote-props": ["error", "as-needed", { "keywords": false, "unnecessary": true }],
-
-    // specify whether double or single quotes should be used
-    "quotes": ["error", "double"],
 
     // require use of the second argument for parseInt()
     "radix": ["error"],
@@ -578,41 +467,12 @@ module.exports = {
     // require JSDoc comments
     "require-jsdoc": ["off"],
 
-    // Enforce spacing before and after semicolons
-    "semi-spacing": ["error"],
-
-    // Enforce location of semicolons
-    "semi-style": ["error", "last"],
-
-    // require or disallow use of semicolons instead of ASI
-    "semi": ["error", "always"],
 
     // a sorted list of import declarations make it easier for developers to read the code and find necessary imports later
     "sort-imports": ["off"],
 
     // sort variables within the same declaration block
     "sort-vars": ["off"],
-
-    // require or disallow space before blocks
-    "space-before-blocks": ["off"],
-
-    // require or disallow space before function opening parenthesis
-    "space-before-function-paren": ["off"],
-
-    // require or disallow spaces inside parentheses
-    "space-in-parens": ["error", "never"],
-
-    // require spaces around operators
-    "space-infix-ops": ["error"],
-
-    // Require or disallow spaces before/after unary operators
-    "space-unary-ops": ["error"],
-
-    // require or disallow a space immediately following the // or /* in a comment
-    "spaced-comment": ["warn", "always", { "exceptions": ["-", "+", "/", "*"]}],
-
-    // Enforce spacing around colons of switch statements
-    "switch-colon-spacing": ["error", {"after": true, "before": false}],
 
     // Require or disallow the Unicode Byte Order Mark
     "unicode-bom": ["error", "never"],
@@ -625,12 +485,6 @@ module.exports = {
 
     // ensure that the results of typeof are compared against a valid string
     "valid-typeof": ["error"],
-
-    // require immediate function invocation to be wrapped in parentheses
-    "wrap-iife": ["error"],
-
-    // require regex literals to be wrapped in parentheses
-    "wrap-regex": ["error"],
 
     // require or disallow Yoda conditions
     "yoda": ["error", "never"]

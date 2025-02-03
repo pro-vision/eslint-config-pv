@@ -51,6 +51,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@eslint/js": "8.44.0",
+    "@stylistic/eslint-plugin": "^3.0.1",
     "@types/node": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "6.1.0",
     "@typescript-eslint/parser": "6.1.0",
