@@ -7,6 +7,7 @@ module.exports = [
   // parser option for typescript-eslint for the TypeChecked rules
   {
     name: "eslint-config-pv/ts-plugin-options",
+    files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
         project: "./tsconfig.json",
@@ -55,6 +56,7 @@ module.exports = [
   // @typescript-eslint rules
   {
     name: "eslint-config-pv/ts-rules",
+    files: ["**/*.ts", "**/*.tsx"],
     rules: {
       "@typescript-eslint/adjacent-overload-signatures": "error",
       "@typescript-eslint/array-type": "off",

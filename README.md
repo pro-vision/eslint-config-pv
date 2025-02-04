@@ -186,3 +186,24 @@ export default [
 +  },
 ]
 ```
+
+### For .js and .ts files in the same project
+
+`eslint-config-pv/typescript` rules will apply only to `.ts` files, and the other rules (`eslint-config-pv/javascript` and `eslint-config-pv/prettier`) will apply to both. The only thing that you have make sure of is that any rule customization for `@typescript-eslint` that needs type information (see the [list of rules](https://typescript-eslint.io/rules/?=typeInformation)), are only applied to `.ts` files. i.e.:
+
+```diff
+...
+  {
+    rules: {
+      "no-console": "off",
+-     "@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: false }],
+    }
+  },
++ {
++   files: ["**/*.ts"],
++   rules: {
++     "@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: false }],
++   }
++ }
+
+```
