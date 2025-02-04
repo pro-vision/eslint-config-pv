@@ -132,6 +132,6 @@ module.exports = {
     "@typescript-eslint/prefer-destructuring": "off",
     "@typescript-eslint/prefer-find": "off",
     "@typescript-eslint/related-getter-setter-pairs": "warn",
-    "@typescript-eslint/use-unknown-in-catch-callback-variable": "off"
+    "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
   }
 };

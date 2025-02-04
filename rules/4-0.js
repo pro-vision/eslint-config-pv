@@ -43,9 +43,6 @@ module.exports = {
     // eanforce “for” loop update clause moving the counter in the right direction
     "for-direction": ["error"],
 
-    // require or disallow spacing between function identifiers and their invocations
-    "func-call-spacing": ["error", "never"],
-
     // require function names to match the name of the variable or property to which they are assigned
     "func-name-matching": ["off"],
 
@@ -169,9 +166,6 @@ module.exports = {
 
     // disallow a duplicate case label.
     "no-duplicate-case": ["error"],
-
-    // validates that all imports from a single module exists in a single import statement
-    "no-duplicate-imports": ["error"],
 
     // disallow else after a return in an if
     "no-else-return": ["warn"],
