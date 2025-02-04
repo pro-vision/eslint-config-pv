@@ -2,7 +2,12 @@
 
 ## 5.0.0
 
-- Updated: rules for typescript-eslint up to v8.23.0
+See [migration guide](./migration-guide-v5.md)!
+
+- Changed: moved to flat eslint config file.
+- Updated: rules which were moved to @stylistic plugin.
+- Updated: rules for typescript-eslint up to v8.23.0.
+- using valid-jsdoc eslint plugin to replace the deprecated `valid-jsdoc` rule.
 
 ## 4.0.0
 

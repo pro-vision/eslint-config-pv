@@ -42,7 +42,15 @@
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "watch": "jest --watch"
   },
-  "main": "index.js",
+  "main": "javascript.js",
+  "exports": {
+    ".": "./javascript.js",
+    "./javascript": "./javascript.js",
+    "./typescript": "./typescript.js",
+    "./prettier": "./prettier.js",
+    "./configs/": "./configs/",
+    "./package.json": "./package.json"
+  },
   "keywords": [
     "eslint",
     "eslintconfig",
@@ -50,17 +58,21 @@
   ],
   "license": "Apache-2.0",
   "devDependencies": {
-    "@eslint/js": "8.44.0",
-    "@stylistic/eslint-plugin": "^3.0.1",
+    "@eslint/js": "9.19.0",
+    "@stylistic/eslint-plugin": "3.0.1",
     "@types/node": "^16.0.0",
-    "@typescript-eslint/eslint-plugin": "6.1.0",
-    "@typescript-eslint/parser": "6.1.0",
-    "eslint": "8.45.0",
-    "eslint-config-prettier": "8.8.0",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-prettier": "4.2.1",
+    "eslint": "9.19.0",
+    "eslint-config-prettier": "10.0.1",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jsdoc": "50.6.3",
+    "eslint-plugin-prettier": "5.2.3",
+    "globals": "15.14.0",
     "jest": "27.3.1",
-    "prettier": "2.8.8",
-    "typescript": "5.1.6"
+    "prettier": "3.4.2",
+    "typescript": "5.7.3",
+    "typescript-eslint": "8.23.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
   }
 }

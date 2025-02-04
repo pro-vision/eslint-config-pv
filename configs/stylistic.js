@@ -1,5 +1,14 @@
+const stylistic = require("@stylistic/eslint-plugin");
 
-module.exports = {
+module.exports = [
+  {
+    name: "eslint-config-pv/stylistic-plugin",
+    plugins: {
+      "@stylistic": stylistic,
+    }
+  },
+  {
+    name: "eslint-config-pv/stylistic-js-rules",
     rules: {
       // enforce line breaks after opening and before closing array brackets
       "@stylistic/array-bracket-newline": ["off"],
@@ -36,7 +45,7 @@ module.exports = {
       "@stylistic/implicit-arrow-linebreak": "off",
       // require identifiers to match the provided regular expression
       "@stylistic/indent": ["error", 2, { "SwitchCase": 1 }],
-      "@stylistic/indent-binary-ops": ["error", 2, { "SwitchCase": 1 }],
+      "@stylistic/indent-binary-ops": ["error", 2],
       // enforces spacing between keys and values in object literal properties
       "@stylistic/key-spacing": ["warn", { "beforeColon": false, "afterColon": true }],
       "@stylistic/keyword-spacing": "off",
@@ -126,12 +135,15 @@ module.exports = {
       "@stylistic/wrap-regex": ["error"], // deprecated
       // spacing consistency for generators
       "@stylistic/yield-star-spacing": ["error", { "before": false, "after": true }],
-
-
+    }
+  },
+  {
+    name: "eslint-config-pv/stylistic-ts-rules",
+    rules: {
       "@stylistic/member-delimiter-style": "error",
       "@stylistic/type-annotation-spacing": "error",
       "@stylistic/type-generic-spacing": "error",
       "@stylistic/type-named-tuple-spacing": "error",
     }
   }
-;
+];
