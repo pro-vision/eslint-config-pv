@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.0
+
+- Updated: rules for typescript-eslint up to v8.23.0
+
 ## 4.0.0
 
 - Updated: updated for @typescript-eslint v6

@@ -26,5 +26,10 @@ module.exports = {
     "prefer-promise-reject-errors": "off",
     "no-useless-constructor": "off",
     "require-await": "off",
+    "class-methods-use-this": "off",
+    "no-return-await": "off",
+    "consistent-return": "off",
+    "max-params": "off",
+    "prefer-destructuring": "off",
   },
 };
