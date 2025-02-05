@@ -16,9 +16,9 @@ Rules mostly follow:
 
 ```bash
 npm install --save-dev @pro-vision/eslint-config-pv eslint eslint-plugin-import eslint-plugin-jsdoc
-# in addition, for typescript linting
+# in addition, for Typescript linting
 npm install --save-dev typescript-eslint typescript
-# in addition, to use with prettier
+# in addition, to use with Prettier
 npm install --save-dev eslint-plugin-prettier eslint-config-prettier
 ```
 
@@ -38,6 +38,7 @@ export default [
   ...pvESLintTS,
   ...pvESLintPrettier,
 
+  // modify rules if needed
   {
     rules: {
       "no-console": "off",
@@ -57,7 +58,7 @@ export default [
         },
       ],
     }
-  }
+  },
 ]
 ```
 
@@ -124,8 +125,8 @@ and update the eslint.config.mjs file
 + import pvESLintPrettier from "@pro-vision/eslint-config-pv/prettier";
 
 export default [
-    ...pvESLintJS
-+   ...pvESLintPrettier
+    ...pvESLintJS,
++   ...pvESLintPrettier,
 
     {
       rules: {
@@ -138,7 +139,7 @@ export default [
 
 This will run eslint with your prettier config in addition to the previous eslint rules and report any formatting issues / auto fix them.
 
-### For typescript files
+### For Typescript files
 
 install the additional dependency
 
@@ -156,9 +157,9 @@ and update the eslint.config.mjs file using `eslint-config-pv/typescript` **Inst
   import pvESLintPrettier from "@pro-vision/eslint-config-pv/prettier";
 
 export default [
--  ...pvESLintJS
-+  ...pvESLintTS
-   ...pvESLintPrettier
+-  ...pvESLintJS,
++  ...pvESLintTS,
+   ...pvESLintPrettier,
 
     {
       rules: {
@@ -187,9 +188,9 @@ export default [
 ]
 ```
 
-### For .js and .ts files in the same project
+### For `.js` and `.ts` files in the same project
 
-`eslint-config-pv/typescript` rules will apply only to `.ts` files, and the other rules (`eslint-config-pv/javascript` and `eslint-config-pv/prettier`) will apply to both. The only thing that you have make sure of is that any rule customization for `@typescript-eslint` that needs type information (see the [list of rules](https://typescript-eslint.io/rules/?=typeInformation)), are only applied to `.ts` files. i.e.:
+`eslint-config-pv/typescript` rules will apply only to `.ts` and `.tsx` files, and the other rules (`eslint-config-pv/javascript` and `eslint-config-pv/prettier`) will apply to both. The only thing that you have make sure of is that any rule customization for `@typescript-eslint` that needs type information (see the [list of rules](https://typescript-eslint.io/rules/?=typeInformation)), are only applied to `.ts(x)` files. i.e.:
 
 ```diff
 ...
@@ -200,7 +201,7 @@ export default [
     }
   },
 + {
-+   files: ["**/*.ts"],
++   files: ["**/*.ts", "**/*.tsx"],
 +   rules: {
 +     "@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: false }],
 +   }
