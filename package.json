@@ -35,7 +35,7 @@
     "url": "git+https://github.com/pro-vision/eslint-config-pv.git"
   },
   "scripts": {
-    "lint": "eslint . --ignore-path .gitignore",
+    "lint": "eslint .",
     "pretest": "npm run lint",
     "release": "npmpub",
     "test": "jest",
