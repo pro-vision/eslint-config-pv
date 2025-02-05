@@ -98,7 +98,10 @@ module.exports = [
       "@typescript-eslint/no-loop-func": "off",
       "@typescript-eslint/no-magic-numbers": ["off"],
       "@typescript-eslint/no-misused-new": "error",
-      "@typescript-eslint/no-misused-promises": "error",
+      "@typescript-eslint/no-misused-promises": ["error", {
+        // allow e.g. btn.addEventListener("click", async e => {...})
+        checksVoidReturn: false,
+      }],
       "@typescript-eslint/no-namespace": "error",
       "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
       // no additional linting when the developer has decided to use non null assertion
@@ -121,7 +124,10 @@ module.exports = [
       "@typescript-eslint/no-unsafe-return": "error",
       "@typescript-eslint/no-unused-expressions": ["error"],
       "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-      "@typescript-eslint/no-use-before-define": ["warn"],
+      "@typescript-eslint/no-use-before-define": ["warn", {
+        "functions": false,
+        "classes": false,
+      }],
       "@typescript-eslint/no-useless-constructor": ["error"],
       "@typescript-eslint/non-nullable-type-assertion-style": "off",
       "@typescript-eslint/prefer-as-const": "off",

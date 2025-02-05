@@ -119,7 +119,7 @@ module.exports = [
       // aimed at eliminating empty functions. A function will not be considered a problem if it contains a comment
       "no-empty-function": ["error"],
       // disallow empty statements
-      "no-empty": ["warn"],
+      "no-empty": ["error", { allowEmptyCatch: true }],
       // disallow comparisons to null without a type-checking operator
       "no-eq-null": ["error"],
       // disallow use of eval()
@@ -279,7 +279,10 @@ module.exports = [
       // e.g. `.addEventListener(_e => ...)` when argument is passed during invokation but not used in the method's body
       "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
       // disallow use of variables before they are defined
-      "no-use-before-define": ["warn"],
+      "no-use-before-define": ["warn", {
+        "functions": false,
+        "classes": false,
+      }],
       // disallow unnecessary .call() and .apply()
       "no-useless-call": ["error"],
       // it’s unnecessary to use computed properties with literals
@@ -349,7 +352,7 @@ module.exports = [
       // suggest using arrow functions as callbacks
       "prefer-arrow-callback": ["error"],
       // suggest using of const declaration for variables that are never modified after declared
-      "prefer-const": ["error"],
+      "prefer-const": ["error", { destructuring: "all" }],
       // Prefer destructuring from arrays and objects
       "prefer-destructuring": ["off"],
       // require using Error objects as Promise rejection reasons
