@@ -38,7 +38,11 @@ To migrate an existing project:
 
 2- rename .eslintrc.js to eslintrc.config.cjs. (you can also use the .mjs extension and use esm syntax instead of commonJs).
 
-3- move .gitignore content to eslint.config.cjs
+3- update eslint config
+
+- use flat notation
+- rename stylistic/jsdoc rules
+- move `.eslintignore` content to `eslint.config.cjs`
 
 ```diff
 - // .eslintignore
@@ -111,12 +115,13 @@ module.exports = {
 
 ```
 
-You might have different rules in your config or as inline comment in combination with `/* eslint-disable */`. See these pages for the complete list of rules that have been moved to @stylistic:
+You might have different rules in your config or as inline comment in combination with `/* eslint-disable */`. See these pages for the complete list of rules that have been moved to `@stylistic` / `eslint-plugin-jsdoc`:
 
 | | |
 | -------- | ------- |
 | eslint | https://eslint.org/blog/2023/10/deprecating-formatting-rules/ |
 | eslint-typescript | https://typescript-eslint.io/blog/deprecating-formatting-rules/#upgrading-to-eslint-stylistic |
+| valid-jsdoc | https://github.com/gajus/eslint-plugin-jsdoc/wiki/Comparison-with-deprecated-JSdoc-related-ESLint-rules |
 
 4- Make sure the correct pattern is passed for the .ts files via cli e.g. npm scripts:
 
