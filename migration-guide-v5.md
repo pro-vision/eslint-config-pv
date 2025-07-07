@@ -16,22 +16,10 @@ To migrate an existing project:
 
 -    "@typescript-eslint/eslint-plugin": "6.1.0",
 -    "@typescript-eslint/parser": "6.1.0",
-+    "typescript-eslint": "8.23.0",
-
 -    "eslint": "8.45.0",
-+    "eslint": "9.19.0",
-
 -    "eslint-config-prettier": "8.8.0",
-+    "eslint-config-prettier": "10.0.1",
-
 -    "eslint-plugin-import": "2.27.5",
-+    "eslint-plugin-import": "2.31.0",
-
 -    "eslint-plugin-prettier": "5.0.0",
-+    "eslint-plugin-prettier": "5.2.3",
-
-+    "eslint-plugin-jsdoc": "50.6.3",
-+    "globals": "15.14.0",
   }
 }
 ```

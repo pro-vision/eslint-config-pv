@@ -15,14 +15,12 @@ Rules mostly follow:
 ## Installation
 
 ```bash
-npm install --save-dev @pro-vision/eslint-config-pv eslint eslint-plugin-import eslint-plugin-jsdoc
+npm install --save-dev @pro-vision/eslint-config-pv
 # in addition, for Typescript linting
 npm install --save-dev typescript-eslint typescript
 # in addition, to use with Prettier
-npm install --save-dev eslint-plugin-prettier eslint-config-prettier
+npm install --save-dev eslint-plugin-prettier eslint-config-prettier prettier
 ```
-
-See this projects [package.json](./package.json)'s devDependency list for the exact version which were tested against.
 
 ## Usage
 
@@ -110,10 +108,10 @@ export default [
 
 ### With prettier
 
-install these dependencies
+If you haven't installed [prettier](https://www.npmjs.com/package/prettier) as your dependency already, then do
 
 ```bash
-npm install --save-dev eslint-plugin-prettier eslint-config-prettier
+npm install --save-dev prettier
 ```
 
 and update the eslint.config.mjs file
@@ -137,14 +135,14 @@ export default [
 
 ```
 
-This will run eslint with your prettier config in addition to the previous eslint rules and report any formatting issues / auto fix them.
+This will run eslint with your prettier config in addition to the previous eslint rules and report any formatting issues / auto fix them. Any `@pro-vision/eslint-config-pv` formatting rule (e.g. `@stylistic/max-len`) will automatically be ignored in favor of prettier configuration.
 
 ### For Typescript files
 
-install the additional dependency
+Make sure you have already installed typescript as your dependency:
 
 ```bash
-npm install --save-dev typescript-eslint
+npm install --save-dev typescript
 ```
 
 and update the eslint.config.mjs file using `eslint-config-pv/typescript` **Instead** of `eslint-config-pv/javascript` (It already contains all the rules in the /javascript config).

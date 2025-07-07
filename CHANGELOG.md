@@ -4,10 +4,19 @@
 
 See [migration guide](./migration-guide-v5.md)!
 
-- Changed: moved to flat eslint config file.
-- Updated: rules which were moved to @stylistic plugin.
-- Updated: rules for typescript-eslint up to v8.23.0.
-- using valid-jsdoc eslint plugin to replace the deprecated `valid-jsdoc` rule.
+### 5.0.0-alpha.1
+
+- Changed: eslint and eslint plugins are defined as packages dependencies and the user is not expected to install them anymore.
+- (Breaking) Added: minimal node version that support `require(esm)` (20.19.0 and 22.12.0) to allow continued to use require in combination with esm only dependencies.
+- Fix: `@stylistic/object-property-newline` option name.
+- (Breaking) removed: `legacy` rule set which was meant for pre ES6 javascript. And not really relevant anymore.
+
+### 5.0.0-alpha.0
+
+- (Breaking) Changed: moved to flat eslint config file.
+- (Breaking) Updated: rules which were moved to @stylistic plugin.
+- (Breaking) Updated: rules for typescript-eslint up to v8.23.0.
+- (Breaking) using valid-jsdoc eslint plugin to replace the deprecated `valid-jsdoc` rule.
 
 ## 4.0.0
 

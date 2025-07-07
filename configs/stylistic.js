@@ -90,7 +90,7 @@ module.exports = [
       // require padding inside curly braces
       "@stylistic/object-curly-spacing": ["off"],
       // require that object properties be placed on separate lines for better readability
-      "@stylistic/object-property-newline": ["error", { "allowMultiplePropertiesPerLine": true }],
+      "@stylistic/object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }],
       // or just when there's a var initialization
       "@stylistic/one-var-declaration-per-line": ["error", "initializations"],
       // enforce operators to be placed before or after line breaks
