@@ -2,128 +2,207 @@
 
 This package provides pro!vision's ESLint configuration as an extensible shared config.
 
-_Inspired by [Airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)_
+_Originally inspired by [Airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)_
 
 Rules mostly follow:
 
-- eslint:recommended
-- @typescript-eslint/recommended
+- eslint's `js.configs.recommended`
+- typescript-eslint's `strict-type-checked`
 
-## Versions
-
-This is version >= 3.1. of eslint-config-pv, which is compatible with eslint >= 8.45. If you are using eslint 3, use eslint-config-pv 1.0.10
+> [!IMPORTANT]
+> Since version 5.0.0, only the eslint's flat config file is supported, for older .eslintrc config files please use this package [@v4.0.0](https://www.npmjs.com/package/@pro-vision/eslint-config-pv/v/4.0.0).
 
 ## Installation
 
 ```bash
-npm install --save-dev @pro-vision/eslint-config-pv eslint-plugin-import
-# for the eslint 3 compatible version
-npm install --save-dev eslint-config-pv@1.0.10 eslint-plugin-import
+npm install --save-dev @pro-vision/eslint-config-pv
+# in addition, for Typescript linting
+npm install --save-dev typescript-eslint typescript
+# in addition, to use with Prettier
+npm install --save-dev eslint-plugin-prettier eslint-config-prettier prettier
 ```
 
 ## Usage
 
-We export four ESLint configurations for usage in projects.
-
-### eslint-config-pv
-
-Our default export contains all of our ESLint rules, including ECMAScript 6 / ES2015.
-Add `"extends": "@pro-vision/eslint-config-pv"` to your .eslintrc:
+Create an `eslint.config.mjs` (or `eslint.config.cjs`) file with necessary presets and customized rules. For example:
 
 ```js
-{
-  "extends": "@pro-vision/eslint-config-pv",
-  "rules": {
-    // additional rules here
+// eslint.config.mjs
+
+import pvESLintTS from "@pro-vision/eslint-config-pv/typescript";
+import pvESLintPrettier from "@pro-vision/eslint-config-pv/prettier";
+
+export default [
+  ...pvESLintTS,
+  ...pvESLintPrettier,
+
+  // modify rules if needed
+  {
+    rules: {
+      "no-console": "off",
+      "@typescript-eslint/unbound-method": "off",
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always",
+          pathGroups: [
+            {
+              pattern: "{Helper,Components}/**",
+              group: "internal",
+            },
+          ],
+          pathGroupsExcludedImportTypes: [],
+          groups: ["builtin", "external", "internal", ["index", "sibling", "parent"]],
+        },
+      ],
+    }
   },
-  "env": {
-    // ... add more environments
-  }
-}
+]
 ```
 
-### eslint-config-pv/legacy
+In detail for specific use cases:
 
-Use the legacy sub package if you only want to lint ES5 and below.
+### Javascript files
 
 ```js
-{
-  "extends": "@pro-vision/eslint-config-pv/legacy",
-  "rules": {
-    // additional rules here
-  }
-}
+// eslint.config.mjs
+
+import pvESLintJS from "@pro-vision/eslint-config-pv/javascript";
+
+export default [
+  ...pvESLintJS,
+]
 ```
 
-### eslint-config-pv/prettier
+### Modifying rules
 
-You need to install additional plugins:
+```diff
+// eslint.config.mjs
+
+import pvESLintJS from "@pro-vision/eslint-config-pv/javascript";
+
+export default [
+  ...pvESLintJS,
+
++  {
++    rules: {
++      "no-console": "off",
++      "import/order": [
++        "error",
++        {
++          "newlines-between": "always",
++          pathGroups: [
++            {
++              pattern: "{Helper,Components}/**",
++              group: "internal",
++            },
++          ],
++          pathGroupsExcludedImportTypes: [],
++          groups: ["builtin", "external", "internal", ["index", "sibling", "parent"]],
++        },
++      ],
++    }
++  }
+]
+```
+
+### With prettier
+
+If you haven't installed [prettier](https://www.npmjs.com/package/prettier) as your dependency already, then do
 
 ```bash
-npm install --save-dev eslint-config-prettier eslint-plugin-prettier prettier
+npm install --save-dev prettier
 ```
 
-This allows you to use prettier with eslint integration
+and update the eslint.config.mjs file
 
-```js
-{
-  "extends": "@pro-vision/eslint-config-pv/prettier"
-}
+```diff
+// eslint.config.mjs
+
+  import pvESLintJS from "@pro-vision/eslint-config-pv/javascript";
++ import pvESLintPrettier from "@pro-vision/eslint-config-pv/prettier";
+
+export default [
+    ...pvESLintJS,
++   ...pvESLintPrettier,
+
+    {
+      rules: {
+        ...
+      }
+    }
+]
+
 ```
 
-See the [ESlint config docs](http://eslint.org/docs/user-guide/configuring#extending-configuration-files)
-for more information.
+This will run eslint with your prettier config in addition to the previous eslint rules and report any formatting issues / auto fix them. Any `@pro-vision/eslint-config-pv` formatting rule (e.g. `@stylistic/max-len`) will automatically be ignored in favor of prettier configuration.
 
-### eslint-config-pv/typescript
+### For Typescript files
 
-You need to install `typescript` and additional `@typescript-eslint` plugins (>=v6.1.0):
+Make sure you have already installed typescript as your dependency:
 
 ```bash
-npm install --save-dev typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install --save-dev typescript
 ```
 
-This allows you to eslint your typescript files
+and update the eslint.config.mjs file using `eslint-config-pv/typescript` **Instead** of `eslint-config-pv/javascript` (It already contains all the rules in the /javascript config).
 
-```js
-{
-  "extends": [
-    "@pro-vision/eslint-config-pv/typescript",
-    // "@pro-vision/eslint-config-pv/prettier" // in case you are using prettier as well
-  ]
-}
+```diff
+// eslint.config.mjs
+
+- import pvESLintJS from "@pro-vision/eslint-config-pv/javascript";
++ import pvESLintTS from "@pro-vision/eslint-config-pv/typescript";
+  import pvESLintPrettier from "@pro-vision/eslint-config-pv/prettier";
+
+export default [
+-  ...pvESLintJS,
++  ...pvESLintTS,
+   ...pvESLintPrettier,
+
+    {
+      rules: {
+        ...
+      }
+    }
+]
+
 ```
 
-`@pro-vision/eslint-config-pv/typescript` assumes your `tsconfig.json` file is in the same directory as where you call eslint. For example your projects root directory. But you can also specify this with:
+`@pro-vision/eslint-config-pv/typescript` assumes your `tsconfig.json` file is in the same directory as where you call eslint. i.e. your projects root directory. But you can also specify this with:
 
-```js
-{
-  "extends": [
-    "@pro-vision/eslint-config-pv/typescript",
-  ]
-  parserOptions: {
-    project: "./my-tsconfig.json",
-    tsconfigRootDir: "my-configs/",
+```diff
+// eslint.config.mjs
+
+export default [
+  ...
++  {
++    languageOptions: {
++      parserOptions: {
++        project: "./my-tsconfig.json",
++        tsconfigRootDir: "my-configs/",
++      },
++    },
++  },
+]
+```
+
+### For `.js` and `.ts` files in the same project
+
+`eslint-config-pv/typescript` rules will apply only to `.ts` and `.tsx` files, and the other rules (`eslint-config-pv/javascript` and `eslint-config-pv/prettier`) will apply to both. The only thing that you have make sure of is that any rule customization for `@typescript-eslint` that needs type information (see the [list of rules](https://typescript-eslint.io/rules/?=typeInformation)), are only applied to `.ts(x)` files. i.e.:
+
+```diff
+...
+  {
+    rules: {
+      "no-console": "off",
+-     "@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: false }],
+    }
   },
-}
++ {
++   files: ["**/*.ts", "**/*.tsx"],
++   rules: {
++     "@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: false }],
++   }
++ }
+
 ```
-
-## WebStorm Integration
-
-Ensure you are using `node >= 4.5` and you have installed `eslint` and `eslint-plugin-import` globally:
-
-```bash
-# node version should be at least 4.5
-node -v
-
-# install necessary modules globally
-npm install -g eslint eslint-plugin-import
-```
-
-Now you can follow the instructions [here](https://www.jetbrains.com/help/webstorm/2016.2/using-javascript-code-quality-tools.html#ESLint)
-
-Keep in mind that WebStorm pass all JavaScript files (starting from project root) to `eslint`. To prevent directories
-from being linted, mark them as _Excluded_. Go to project structure and right click on the directory to be excluded ->
-`Mark Directory as` -> `Excluded`. Special directories, such as `node_modules` are marked automatically as _library root_
-and will be excluded by default.
-
-Alternatively, you can define `.eslintignore` [as described here](http://eslint.org/docs/user-guide/configuring#ignoring-files-and-directories).

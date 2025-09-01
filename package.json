@@ -1,6 +1,6 @@
 {
   "name": "@pro-vision/eslint-config-pv",
-  "version": "4.0.0",
+  "version": "5.0.0-alpha.1",
   "description": "pro!vision ESLint configuration. Can be adapted and adjusted in each project.",
   "author": {
     "name": "pro!vision GmbH",
@@ -20,6 +20,9 @@
       "email": "dding@pro-vision.de"
     }
   ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "remarkConfig": {
     "plugins": [
       "remark-preset-lint-recommended"
@@ -35,31 +38,44 @@
     "url": "git+https://github.com/pro-vision/eslint-config-pv.git"
   },
   "scripts": {
-    "lint": "eslint . --ignore-path .gitignore",
+    "lint": "eslint .",
     "pretest": "npm run lint",
     "release": "npmpub",
     "test": "jest",
-    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "watch": "jest --watch"
   },
-  "main": "index.js",
+  "main": "javascript.js",
+  "exports": {
+    ".": "./javascript.js",
+    "./javascript": "./javascript.js",
+    "./typescript": "./typescript.js",
+    "./prettier": "./prettier.js",
+    "./configs/": "./configs/",
+    "./package.json": "./package.json"
+  },
   "keywords": [
     "eslint",
     "eslintconfig",
     "pro!vision"
   ],
   "license": "Apache-2.0",
+  "dependencies": {
+    "@eslint/js": "9.34.0",
+    "@stylistic/eslint-plugin": "5.3.1",
+    "eslint": "9.34.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-jsdoc": "54.1.1",
+    "eslint-plugin-prettier": "5.5.4",
+    "globals": "16.3.0",
+    "jest-light-runner": "^0.7.9",
+    "typescript-eslint": "8.41.0"
+  },
   "devDependencies": {
-    "@eslint/js": "8.44.0",
     "@types/node": "^16.0.0",
-    "@typescript-eslint/eslint-plugin": "6.1.0",
-    "@typescript-eslint/parser": "6.1.0",
-    "eslint": "8.45.0",
-    "eslint-config-prettier": "8.8.0",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-prettier": "4.2.1",
-    "jest": "27.3.1",
-    "prettier": "2.8.8",
-    "typescript": "5.1.6"
+    "jest": "30.1.2",
+    "npmpub": "^5.1.1",
+    "prettier": "3.4.2",
+    "typescript": "5.9.2"
   }
 }

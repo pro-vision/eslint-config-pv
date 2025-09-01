@@ -2,6 +2,9 @@
 "use strict";
 
 const ESLint = require("eslint").ESLint;
+
+const pvESLintJS = require("../javascript");
+
 const validJS = `
 import _ from "underscore";
 import SearchInputModel from "search-input-model";
@@ -96,25 +99,13 @@ let a;
 something = 1;
 `;
 
-const invalidES5 = `
-function test() {
-  var a = [
-    1,
-    2,
-  ];
-  a.push(arguments.callee);
-  var b = {};
-  b.__defineGetter__('tom', test);
-}
-`;
-
 describe("flags no warnings with valid js", () => {
   let eslint, results;
 
   beforeEach(() => {
     eslint = new ESLint({
-      useEslintrc: false,
-      overrideConfigFile: "__tests__/.eslintrc-index",
+      baseConfig: pvESLintJS,
+      overrideConfigFile: true,
     });
   });
 
@@ -129,34 +120,13 @@ describe("flags no warnings with valid js", () => {
   });
 });
 
-describe("handles legacy JS", () => {
-  let eslint, results;
-
-  beforeEach(() => {
-    eslint = new ESLint({
-      useEslintrc: false,
-      overrideConfigFile: "__tests__/.eslintrc-legacy",
-    });
-  });
-
-  it("doesn't parse ES6", async () => {
-    results = await eslint.lintText(validJS);
-    expect(results[0].errorCount).toBe(1);
-  });
-
-  it("follows legacy rules", async () => {
-    results = await eslint.lintText(invalidES5);
-    expect(results[0].errorCount).toBe(7);
-  });
-});
-
 describe("flags warnings with invalid js", () => {
   let eslint, results;
 
   beforeEach(() => {
     eslint = new ESLint({
-      useEslintrc: false,
-      overrideConfigFile: "__tests__/.eslintrc-index",
+      baseConfig: pvESLintJS,
+      overrideConfigFile: true,
     });
   });
 
