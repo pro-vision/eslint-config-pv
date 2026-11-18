@@ -1,5 +1,16 @@
 # Changelog
 
+## 6.0.0
+
+- (Breaking) Updated: eslint to v10. See eslint's [v10 migration guide](https://eslint.org/docs/latest/use/migrate-to-10.0.0), e.g. for changes to config file lookup and the removed support for `/* eslint-env */` comments.
+- (Breaking) Changed: minimal node version is 22.22.2 (or 24.15.0). Node 20 reached its end of life and is not supported by the latest eslint-plugin-jsdoc anymore.
+- (Breaking) Changed: replaced `eslint-plugin-import` (no eslint v10 support) with its fork [`eslint-plugin-import-x`](https://github.com/un-ts/eslint-plugin-import-x). It is still registered as `import`, so `import/` rules can be used and overridden as before, but plugin settings have to be renamed to use the `import-x/` prefix (e.g. `"import/resolver"` -> `"import-x/resolver"`, `"import/internal-regex"` -> `"import-x/internal-regex"`).
+- (Breaking) Updated: `@stylistic/eslint-plugin` to v6, `eslint-plugin-jsdoc` to v65, `globals` to v17 and `typescript-eslint` to v8.73.0.
+- Added: `no-unassigned-vars`, `no-useless-assignment` and `preserve-caught-error` rules (new in eslint's recommended config).
+- Added: new typescript-eslint rules (all disabled).
+- Changed: `no-shadow-restricted-names` reports shadowing of `globalThis` as well (new eslint v10 default).
+- Notice: typescript-eslint does not support TypeScript 7 yet, TypeScript <=6.0 is required for the typescript config.
+
 ## 5.0.0
 
 See [migration guide](./migration-guide-v5.md)!

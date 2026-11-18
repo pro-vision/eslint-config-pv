@@ -414,6 +414,16 @@ module.exports = [
       "logical-assignment-operators": "off",
       "no-empty-static-block": "off",
       "no-new-native-nonconstructor": "off",
+      // Disallow `let` or `var` variables that are read but never assigned
+      "no-unassigned-vars": "error",
+      // Disallow variable assignments when the value is not used
+      "no-useless-assignment": "error",
+      // Disallow losing originally caught error when re-throwing custom errors
+      "preserve-caught-error": "error",
+      // Disallow duplicate module imports (covered by import/no-duplicates)
+      "no-duplicate-imports": "off",
+      // Disallow calls to the `Object` constructor without an argument
+      "no-object-constructor": "off",
     }
   }
 ];

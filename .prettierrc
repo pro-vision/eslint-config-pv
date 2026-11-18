@@ -2,7 +2,7 @@
 arrowParens: avoid
 bracketSpacing: true
 printWidth: 80
-proseWrap: true
+proseWrap: always
 semi: true
 singleQuote: false
 tabWidth: 2

@@ -1,4 +1,4 @@
-const jsdocPlugin = require("eslint-plugin-jsdoc");
+const jsdocPlugin = require("eslint-plugin-jsdoc").default;
 
 module.exports = [
   {

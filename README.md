@@ -12,6 +12,9 @@ Rules mostly follow:
 > [!IMPORTANT]
 > Since version 5.0.0, only the eslint's flat config file is supported, for older .eslintrc config files please use this package [@v4.0.0](https://www.npmjs.com/package/@pro-vision/eslint-config-pv/v/4.0.0).
 
+> [!NOTE]
+> Version 6.0.0 uses ESLint v10 and requires node `^22.22.2 || >=24.15.0`. For the typescript config, TypeScript `<=6.0` is required (typescript-eslint does not support TypeScript 7 yet). See the [changelog](./CHANGELOG.md#600).
+
 ## Installation
 
 ```bash
@@ -55,9 +58,9 @@ export default [
           groups: ["builtin", "external", "internal", ["index", "sibling", "parent"]],
         },
       ],
-    }
+    },
   },
-]
+];
 ```
 
 In detail for specific use cases:
@@ -101,8 +104,8 @@ export default [
 +          groups: ["builtin", "external", "internal", ["index", "sibling", "parent"]],
 +        },
 +      ],
-+    }
-+  }
++    },
++  },
 ]
 ```
 

@@ -50,6 +50,7 @@ module.exports = [
       "consistent-return": "off",
       "max-params": "off",
       "prefer-destructuring": "off",
+      "no-unused-private-class-members": "off",
     },
   },
 
@@ -197,6 +198,13 @@ module.exports = [
       "@typescript-eslint/prefer-find": "off",
       "@typescript-eslint/related-getter-setter-pairs": "warn",
       "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
+      "@typescript-eslint/no-generated-empty-object-type": "off",
+      "@typescript-eslint/no-unnecessary-type-conversion": "off",
+      "@typescript-eslint/no-unsafe-class-instance-assignment": "off",
+      "@typescript-eslint/no-unsafe-enum-assignment": "off",
+      "@typescript-eslint/no-useless-default-assignment": "off",
+      "@typescript-eslint/no-unused-private-class-members": "off",
+      "@typescript-eslint/strict-void-return": "off",
     }
   }
 ];

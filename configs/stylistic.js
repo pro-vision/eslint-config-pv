@@ -76,7 +76,8 @@ module.exports = [
       // disallow the use of leading or trailing decimal points in numeric literals
       "@stylistic/no-floating-decimal": ["error"],
       // disallow use of multiple spaces
-      "@stylistic/no-multi-spaces": ["error"],
+      // allows aligning object properties and import attributes (was the default before @stylistic v6)
+      "@stylistic/no-multi-spaces": ["error", { "exceptions": { "Property": true, "ImportAttribute": true } }],
       // disallow multiple empty lines and only one newline at the end
       "@stylistic/no-multiple-empty-lines": ["warn", {"max": 2}],
       // disallow trailing whitespace at the end of lines

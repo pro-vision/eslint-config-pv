@@ -1,4 +1,4 @@
-const importPlugin = require("eslint-plugin-import");
+const importPlugin = require("eslint-plugin-import-x").default;
 
 module.exports = [
   // plugin
